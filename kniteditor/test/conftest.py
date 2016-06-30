@@ -1,4 +1,4 @@
-"""The test configuration
+"""The test configuration used by all tests in this directory.
 
 .. seealso:: `pytest reference <http://pytest.org/latest/fixture.html>
 """
