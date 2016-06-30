@@ -2,6 +2,6 @@
 
 
 def test_can_import():
-    """Import themodule and check for a version."""
+    """Import the module and check for a version."""
     import kniteditor
     assert kniteditor.__version__
