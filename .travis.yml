@@ -9,6 +9,7 @@ before_install:
 # https://docs.travis-ci.com/user/installing-dependencies/
 # install kivy https://kivy.org/docs/installation/installation-linux.html
 - sudo add-apt-repository ppa:kivy-team/kivy -y
+- sudo apt-get update
 - sudo apt-get install python3-kivy
 install:
 # install the package
