@@ -3,6 +3,30 @@
 kniteditor Installation Instructions
 ====================================
 
+Kivy Installation
+-----------------
+
+.. warning:: Kivy as of today, 2016/07/04, works for Python 3.4. If you intend to use an other version,
+  be aware that it might take a lot of time.
+
+Windows
+~~~~~~~
+
+1. If kivy does not work, uninstall kivy.
+
+  .. code:: bash
+  
+      py -3.4 -m pip uninstall kivy
+
+2. Uninstall Python 3.4. Unless you want to install Visual Studio and configure how to compile Python modules with the right compiler at the right location, you uninstall Python 3.4. All the installed packages wil be left untouched. This is why we uninstalled kivy before.
+
+3. Use the `kivy installer <https://github.com/KeyWeeUsr/KivyInstaller>`__ to install kivy. [`Thanks <https://github.com/kivy/kivy/issues/4287#issuecomment-229910592>`__]
+
+Ubuntu
+~~~~~~
+
+See the `kivy installation instructions <https://kivy.org/docs/installation/installation.html>`__.
+
 Package installation from Pypi
 ------------------------------
 

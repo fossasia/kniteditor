@@ -7,9 +7,9 @@ from kivy.uix.button import Button
 
 
 class EditorWindow(App):
-    
+
     """The editor window."""
-    
+
     def build(self):
         """Build the UI elements."""
         return Button(text="Hello World")
