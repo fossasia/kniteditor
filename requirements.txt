@@ -5,6 +5,5 @@
 #    pip-compile --output-file requirements.txt requirements.in
 #
 
-Kivy-Garden==0.1.4        # via kivy
+cython==0.24
 kivy==1.9.1
-requests==2.10.0          # via kivy-garden
