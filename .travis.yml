@@ -8,7 +8,7 @@ python:
 before_install:
 # https://docs.travis-ci.com/user/installing-dependencies/
 # install kivy https://kivy.org/docs/installation/installation-linux.html
-- sudo pip3 install cython
+- python3 -m pip install cython
 install:
 # install the package
 - PACKAGE_VERSION=`python3 setup.py --version`
