@@ -1,10 +1,14 @@
 language: python
-sudo: required
 python:
 #- "3.2" # C:\Python32\lib\site-packages\pkg_resources\__init__.py:80: UserWarning: Support for Python 3.0-3.2 has been dropped. Future versions will fail here.
 - '3.3'
 - '3.4'
 - '3.5'
+before_install:
+# https://docs.travis-ci.com/user/installing-dependencies/
+# install kivy https://kivy.org/docs/installation/installation-linux.html
+- add-apt-repository ppa:kivy-team/kivy -y
+- apt-get install python3-kivy
 install:
 # install the package
 - PACKAGE_VERSION=`python3 setup.py --version`
