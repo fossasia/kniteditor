@@ -45,7 +45,9 @@ class EditorWindow(App):
         dir = os.path.dirname(knittingpattern.__file__)
         filename = os.path.join(dir, "convert", "instruction-svgs", "{}.svg")
         height = 20
-        min_x, min_y = layout.bounding_box[:2]
+        min_x, min_y, max_x, max_y = layout.bounding_box
+        width = max_x - min_x
+        height = max_y - min_y
         instructions = list(layout.walk_instructions())
         instructions.sort(key=lambda i: i.instruction.get("render",
             {}).get("z", 0))
@@ -55,8 +57,8 @@ class EditorWindow(App):
                             size_hint=(None, None))
             self.root.add_widget(svg)
             svg.scale = height / svg.height
-            svg.set_right((instruction.x  - min_x + instruction.width)* height + height)    
-            svg.y = (instruction.y - min_y) * height + height
+            svg.set_right((width - instruction.x  + min_x + 1) * height)    
+            svg.y = (instruction.y - min_y + 1) * height
 
 
 def main():
