@@ -46,14 +46,17 @@ class EditorWindow(App):
         filename = os.path.join(dir, "convert", "instruction-svgs", "{}.svg")
         height = 20
         min_x, min_y = layout.bounding_box[:2]
-        for instruction in layout.walk_instructions():
+        instructions = list(layout.walk_instructions())
+        instructions.sort(key=lambda i: i.instruction.get("render",
+            {}).get("z", 0))
+        for instruction in instructions:
             print(instruction.instruction.type, instruction.x, instruction.y)
             svg = SvgWidget(filename.format(instruction.instruction.type),
                             size_hint=(None, None))
             self.root.add_widget(svg)
             svg.scale = height / svg.height
-            svg.pos = ((instruction.x  - min_x)* height + height,
-                (instruction.y - min_y) * height + height)
+            svg.set_right((instruction.x  - min_x + instruction.width)* height + height)    
+            svg.y = (instruction.y - min_y) * height + height
 
 
 def main():
