@@ -3,5 +3,8 @@
 This file starts the editor window.
 """
 if __name__ == "__main__":
-    from .EditorWindow import main
+    import sys
+    import os
+    sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
+    from kniteditor.EditorWindow import main
     main()

@@ -8,3 +8,5 @@
 /.eggs
 *.swp
 *~
+mockup/EditorWindow.svg
+mockup/kniteditor.bmpr
