@@ -7,3 +7,4 @@
 
 cython==0.24
 kivy==1.9.1
+knittingpattern==0.1.2
