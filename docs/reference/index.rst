@@ -7,3 +7,4 @@ Reference
    kniteditor/index
    kniteditor/__main__
    kniteditor/EditorWindow
+   kniteditor/KnittingPatternWidget
