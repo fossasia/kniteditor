@@ -6,7 +6,7 @@
 #
 Kivy-Garden==0.1.4        # via kivy
 kivy==1.9.1
-knittingpattern==0.1.4
+knittingpattern==0.1.5
 Pillow==3.2.0             # via knittingpattern
 requests==2.10.0          # via kivy-garden
 webcolors==1.5            # via knittingpattern
