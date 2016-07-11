@@ -11,10 +11,12 @@ class EditorWindow(App):
 
     def build(self):
         """Build the UI elements."""
-        patterns = knittingpattern.load_from().example("Cafe.json")
-        self._patterns = patterns
-        self.root = KnittingPatternWidget(self._patterns)
-        self.root.build()
+        self._patterns = knittingpattern.load_from().example("negative-rendering.json")
+        pattern = self._patterns.patterns.at(0)
+        self.root = KnittingPatternWidget()
+        self.root.show_pattern(pattern)
+        self.root.mark_row(pattern.rows.at(0))
+        self.root.mark_row(pattern.rows.at(1))
 
 
 def main():
