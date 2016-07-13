@@ -1,15 +1,16 @@
 # -*- mode: python -*-
 from kivy.deps import sdl2, glew, gstreamer
-
+import sys
+site_packages = [path for path in sys.path if path.endswith.rstrip("/\\").endswith('site-packages')]
 
 block_cipher = None
 
 
 a = Analysis(['KnitEditor.py'],
-             pathex=['.'],
+             pathex=['.'] + sys.path,
              binaries=None,
              datas=None,
-             hiddenimports=[],
+             hiddenimports=['knittingpattern'],
              hookspath=[],
              runtime_hooks=[],
              excludes=[],
@@ -32,6 +33,7 @@ coll = COLLECT(exe,
                a.zipfiles,
                a.datas,
                *[Tree(p) for p in (sdl2.dep_bins + glew.dep_bins + gstreamer.dep_bins)],
+               *[Tree(p) for p in site_packages],
                strip=False,
                upx=True,
                name='KnitEditor')
