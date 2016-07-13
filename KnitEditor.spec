@@ -1,4 +1,6 @@
 # -*- mode: python -*-
+from kivy.deps import sdl2, glew, gstreamer
+
 
 block_cipher = None
 
@@ -25,9 +27,11 @@ exe = EXE(pyz,
           upx=True,
           console=True )
 coll = COLLECT(exe,
+               Tree('kniteditor'),
                a.binaries,
                a.zipfiles,
                a.datas,
+               *[Tree(p) for p in (sdl2.dep_bins + glew.dep_bins + gstreamer.dep_bins)],
                strip=False,
                upx=True,
                name='KnitEditor')
