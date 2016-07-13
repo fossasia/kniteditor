@@ -32,8 +32,7 @@ coll = COLLECT(exe,
                a.binaries,
                a.zipfiles,
                a.datas,
-               *[Tree(p) for p in (sdl2.dep_bins + glew.dep_bins + gstreamer.dep_bins)],
-               *[Tree(p) for p in site_packages],
+               *[Tree(p) for p in (sdl2.dep_bins + glew.dep_bins + gstreamer.dep_bins + site_packages)]
                strip=False,
                upx=True,
                name='KnitEditor')
