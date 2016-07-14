@@ -16,7 +16,7 @@ install:
   - "%PYTHON%\\python.exe -m pip install Cython --install-option=\"--no-cython-compile\""
   - "%PYTHON%\\python.exe -m pip install -r requirements.txt"
   # uninstall what is not needed
-  - "%PYTHON%\\python.exe -m pip uninstall wheel Cython"
+  - "%PYTHON%\\python.exe -m pip uninstall Cython"
 
 build_script:
 - cmd: windows-installer/build.bat
