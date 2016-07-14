@@ -13,7 +13,7 @@ environment:
 install:
   - "%PYTHON%\\python.exe -m pip install docutils pygments pypiwin32 kivy.deps.sdl2 kivy.deps.glew"
   - "%PYTHON%\\python.exe -m pip install -r requirements.txt"
-  - "%PYTHON%\\python.exe -m setup.py install"
+  - "%PYTHON%\\python.exe setup.py install"
   
 build_script:
 - cmd: cmd /c windows-build\build.bat
