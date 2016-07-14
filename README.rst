@@ -5,6 +5,10 @@ kniteditor
    :target: https://travis-ci.org/AllYarnsAreBeautiful/kniteditor
    :alt: Build Status
 
+.. image:: https://ci.appveyor.com/api/projects/status/yildjtxp8an3vejx?svg=true
+   :target: https://ci.appveyor.com/project/AllYarnsAreBeautiful/kniteditor
+   :alt: AppVeyor CI build status (Windows)
+
 .. image:: https://codeclimate.com/github/AllYarnsAreBeautiful/kniteditor/badges/gpa.svg
    :target: https://codeclimate.com/github/AllYarnsAreBeautiful/kniteditor
    :alt: Code Climate
