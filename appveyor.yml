@@ -75,7 +75,7 @@ deploy:
   tag: $(APPVEYOR_REPO_TAG_NAME)
   description: "Release $(APPVEYOR_REPO_TAG_NAME)"
   auth_token:
-    secure: MwXRSM+5tbGcYRBOXit2J3L063fkU071wMQkav9vQO6aWq9c0/CeQaPGCJ71CQcv7De9p2eurN9ViNIucXZaHsMscix5HDW5GZ2zeJMqriQ=
+    secure: j1EbCI55pgsetM/QyptIM/QDZC3SR1i4Xno6jjJt9MNQRHsBrFiod0dsuS9lpcC7
   artifact: installer
   force_update: true
   draft: false
