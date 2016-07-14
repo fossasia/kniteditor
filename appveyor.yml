@@ -7,7 +7,7 @@ environment:
     # isn't covered by this document) at the time of writing.
     
     # we only need Python 3.4 for kivy
-    - PYTHON: "C:\\Python34"
+    PYTHON: "C:\\Python34"
 
 
 install:
