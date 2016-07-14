@@ -78,3 +78,8 @@ deploy:
     secure: MwXRSM+5tbGcYRBOXit2J3L063fkU071wMQkav9vQO6aWq9c0/CeQaPGCJ71CQcv7De9p2eurN9ViNIucXZaHsMscix5HDW5GZ2zeJMqriQ=
   artifact: installer
   force_update: true
+  draft: false
+  prerelease: false
+  on:
+    branch: master                 # release from master branch only
+    appveyor_repo_tag: true        # deploy on tag push only
