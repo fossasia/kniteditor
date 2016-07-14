@@ -16,6 +16,8 @@ install:
   # Install Cython for kivy
   # See https://pypi.python.org/pypi/Cython for the option
   - "%PYTHON%\\python.exe -m pip install Cython --install-option=\"--no-cython-compile\""
+  - "%PYTHON%\\python.exe -m pip install -r requirements.txt"
+  - "%PYTHON%\\python.exe -m pip install -r test-requirements.txt"
 
 build: off
 
@@ -61,6 +63,12 @@ on_success:
   - echo %APPVEYOR_REPO_TAG%
   - echo %APPVEYOR_REPO_TAG_NAME%
   - "IF %APPVEYOR_REPO_TAG% == true ( FOR /F %%V IN ('%PYTHON%\\python.exe setup.py --version') DO ( IF \"v%%V\" == \"%APPVEYOR_REPO_TAG_NAME%\" ( %PYTHON%\\python.exe setup.py sdist bdist_wininst upload ) ELSE ( echo \"Invalid tag %APPVEYOR_REPO_TAG_NAME% should be v%%V.\" ) ) ) ELSE ( echo \"Normal build without PyPi deployment.\" )"
+  # uninstall what is not needed
+  - "%PYTHON%\\python.exe -m pip uninstall wheel"
+  # Install Cython for kivy
+  # See https://pypi.python.org/pypi/Cython for the option
+  - "%PYTHON%\\python.exe -m pip uninstall Cython"
+  - "%PYTHON%\\python.exe -m pip uninstall -r test-requirements.txt"
   - windows-installer/build.bat
 
 deploy:
