@@ -1,6 +1,7 @@
 """This module contains the editor window."""
 import knittingpattern
 import os
+import sys
 from kivy.app import App
 from .KnittingPatternWidget import KnittingPatternWidget
 from kivy.uix.pagelayout import PageLayout
@@ -24,8 +25,11 @@ class EditorWindow(App):
         self.root.add_widget(Button(text='Hello world'))
 
 
-def main():
+def main(argv=sys.argv):
     """Open the editor window."""
+    if "--test-imports" in argv:
+        print("Ran with test argument, exiting.")
+        return
     EditorWindow().run()
 
 __all__ = ["main", "EditorWindow"]
