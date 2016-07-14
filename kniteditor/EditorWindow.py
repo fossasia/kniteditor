@@ -27,9 +27,10 @@ class EditorWindow(App):
 
 def main(argv=sys.argv):
     """Open the editor window."""
-    if "test-imports" in argv:
-        print("Ran with test argument, exiting.")
-        return
+    if "/test" in argv:
+        import pytest
+        errcode = pytest.main(["--pyargs", "knittingpattern", "kniteditor"])
+        sys.exit(errcode)
     EditorWindow().run()
 
 __all__ = ["main", "EditorWindow"]
