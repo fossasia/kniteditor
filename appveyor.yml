@@ -14,7 +14,7 @@ install:
   - "%PYTHON%\\python.exe -m pip install -r requirements.txt"
 
 build_script:
-- cmd: windows-installer\build.bat
+- cmd: windows-build\build.bat
 
 test_script:
   # Put your test command here.
