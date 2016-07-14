@@ -56,7 +56,7 @@ class InstructionSVGWidgetCache(object):
 def default_cache():
     """Return the default InstructionSVGWidgetCache.
 
-    :rtype: InstructionSVGWidgetCache
+    :rtype: InstructionSVGWidgetCache.InstructionSVGWidgetCache
     """
     global _cache
     if _cache is None:
