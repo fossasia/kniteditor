@@ -11,15 +11,16 @@ environment:
 
 
 install:
-  # We need wheel installed to build wheels
-  - "%PYTHON%\\python.exe -m pip install wheel"
   # Install Cython for kivy
   # See https://pypi.python.org/pypi/Cython for the option
   - "%PYTHON%\\python.exe -m pip install Cython --install-option=\"--no-cython-compile\""
   - "%PYTHON%\\python.exe -m pip install -r requirements.txt"
-  - "%PYTHON%\\python.exe -m pip install -r test-requirements.txt"
+  # uninstall what is not needed
+  - "%PYTHON%\\python.exe -m pip uninstall wheel Cython"
 
-build: off
+build:
+
+  - windows-installer/build.bat
 
 test_script:
   # Put your test command here.
@@ -36,6 +37,7 @@ after_test:
   # Again, you only need build.cmd if you're building C extensions for
   # 64-bit Python 3.3/3.4. And you need to use %PYTHON% to get the correct
   # interpreter
+  - "%PYTHON%\\python.exe -m pip install wheel"
   - "%PYTHON%\\python.exe setup.py bdist_wheel sdist bdist_wininst"
 
 artifacts:
@@ -63,14 +65,12 @@ on_success:
   - echo %APPVEYOR_REPO_TAG%
   - echo %APPVEYOR_REPO_TAG_NAME%
   - "IF %APPVEYOR_REPO_TAG% == true ( FOR /F %%V IN ('%PYTHON%\\python.exe setup.py --version') DO ( IF \"v%%V\" == \"%APPVEYOR_REPO_TAG_NAME%\" ( %PYTHON%\\python.exe setup.py sdist bdist_wininst upload ) ELSE ( echo \"Invalid tag %APPVEYOR_REPO_TAG_NAME% should be v%%V.\" ) ) ) ELSE ( echo \"Normal build without PyPi deployment.\" )"
-  # uninstall what is not needed
-  - "%PYTHON%\\python.exe -m pip uninstall wheel Cython"
-  - "%PYTHON%\\python.exe -m pip uninstall -r test-requirements.txt"
-  - windows-installer/build.bat
 
 deploy:
 - provider: GitHub
+  # http://www.appveyor.com/docs/deployment/github
   tag: $(APPVEYOR_REPO_TAG_NAME)
+  description: "Release $(APPVEYOR_REPO_TAG_NAME)"
   auth_token:
     secure: MwXRSM+5tbGcYRBOXit2J3L063fkU071wMQkav9vQO6aWq9c0/CeQaPGCJ71CQcv7De9p2eurN9ViNIucXZaHsMscix5HDW5GZ2zeJMqriQ=
   artifact: installer
