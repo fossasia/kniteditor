@@ -16,8 +16,8 @@ AppUpdatesURL=http://ayab-knitting.com/
 DefaultDirName={pf}\KnitEditor
 DisableProgramGroupPage=yes
 LicenseFile=LICENSE
-OutputDir=build\Installer
-OutputBaseFilename=KnitEditor
+OutputDir=dist\Installer
+OutputBaseFilename=KnitEditorInstaller
 Compression=lzma
 SolidCompression=yes
 
