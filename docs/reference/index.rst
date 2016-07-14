@@ -7,3 +7,6 @@ Reference
    kniteditor/index
    kniteditor/__main__
    kniteditor/EditorWindow
+   kniteditor/KnittingPatternWidget
+   kniteditor/InstructionSVGWidgetCache
+   kniteditor/AYABKnitter
