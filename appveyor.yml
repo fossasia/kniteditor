@@ -18,9 +18,8 @@ install:
   # uninstall what is not needed
   - "%PYTHON%\\python.exe -m pip uninstall wheel Cython"
 
-build:
-
-  - windows-installer/build.bat
+build_script:
+- cmd: windows-installer/build.bat
 
 test_script:
   # Put your test command here.
