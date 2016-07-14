@@ -1,5 +1,5 @@
 # -*- mode: python -*-
-from kivy.deps import sdl2, glew, gstreamer
+from kivy.deps import sdl2, glew
 import sys
 site_packages = [path for path in sys.path if path.rstrip("/\\").endswith('site-packages')]
 print(site_packages)
@@ -33,7 +33,7 @@ coll = COLLECT(exe,
                a.binaries,
                a.zipfiles,
                a.datas,
-               *[Tree(p) for p in (sdl2.dep_bins + glew.dep_bins + gstreamer.dep_bins)],
+               *[Tree(p) for p in (sdl2.dep_bins + glew.dep_bins)],
                strip=False,
                upx=True,
                name='KnitEditor')
