@@ -1,13 +1,16 @@
 # see https://packaging.python.org/appveyor/#adding-appveyor-support-to-your-project
 environment:
+  PYPI_USERNAME: niccokunzmann3
+  PYPI_PASSWORD:
+    secure: Gxrd9WI60wyczr9mHtiQHvJ45Oq0UyQZNrvUtKs2D5w=
 
-    # For Python versions available on Appveyor, see
-    # http://www.appveyor.com/docs/installed-software#python
-    # The list here is complete (excluding Python 2.6, which
-    # isn't covered by this document) at the time of writing.
-    
-    # we only need Python 3.4 for kivy
-    PYTHON: "C:\\Python34"
+  # For Python versions available on Appveyor, see
+  # http://www.appveyor.com/docs/installed-software#python
+  # The list here is complete (excluding Python 2.6, which
+  # isn't covered by this document) at the time of writing.
+
+  # we only need Python 3.4 for kivy
+  PYTHON: "C:\\Python34"
 
 
 install:
