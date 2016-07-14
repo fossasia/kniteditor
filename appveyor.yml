@@ -28,7 +28,7 @@ test_script:
   # the interpreter you're using - Appveyor does not do anything special
   # to put the Python evrsion you want to use on PATH.
   - windows-build\dist\KnitEditor\KnitEditor.exe /test
-  - "%PYTHON%\\python.exe -m pytest docs kniteditor"
+  - "%PYTHON%\\python.exe -m pytest --pep8 docs kniteditor"
 
 after_test:
   # This step builds your wheels.
