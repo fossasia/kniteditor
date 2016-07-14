@@ -27,7 +27,7 @@ class EditorWindow(App):
 
 def main(argv=sys.argv):
     """Open the editor window."""
-    if "--test-imports" in argv:
+    if "test-imports" in argv:
         print("Ran with test argument, exiting.")
         return
     EditorWindow().run()
