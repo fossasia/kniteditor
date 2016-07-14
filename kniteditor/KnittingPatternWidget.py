@@ -18,10 +18,10 @@ class KnittingPatternWidget(FloatLayout):
         super().__init__(**kw)
         self._pattern = None
         self._mark = None
-    
+
     def show_pattern(self, pattern):
         """Show a knitting pattern.
-        
+
         :param knittingpattern.KnittingPattern.KnittingPattern pattern: the
           pattern to display
         """
@@ -42,9 +42,9 @@ class KnittingPatternWidget(FloatLayout):
         bbox_width = bbox[2] - bbox[0]
         bbox_height = bbox[3] - bbox[1]
         print(bbox, self.height, self.width)
-        zoom = 20#min(self.height / bbox_height, self.width / bbox_width)
+        zoom = 20  # min(self.height / bbox_height, self.width / bbox_width)
         min_y = bbox[1] - 0.618
-        flip_x = bbox[0] + bbox[2] + 1.618 
+        flip_x = bbox[0] + bbox[2] + 1.618
         create_svg_widget = self._cache.create_svg_widget
         for instruction in self._instructions:
             svg = create_svg_widget(instruction.instruction,
@@ -70,10 +70,12 @@ class KnittingPatternWidget(FloatLayout):
         self._mark = InstructionGroup()
         self._mark.add(Color(0, 0, 1, 1))
         self._mark.add(Rectangle(pos=(x, y), size=(width, border_width)))
-        self._mark.add(Rectangle(pos=(x, y + height), size=(width, border_width)))
+        self._mark.add(Rectangle(pos=(x, y + height),
+                                 size=(width, border_width)))
         self._mark.add(Rectangle(pos=(x, y), size=(border_width, height)))
-        self._mark.add(Rectangle(pos=(x + width, y), size=(border_width, height)))
+        self._mark.add(Rectangle(pos=(x + width, y),
+                                 size=(border_width, height)))
         self.canvas.add(self._mark)
-        
+
 
 __all__ = ["KnittingPatternWidget"]

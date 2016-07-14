@@ -18,10 +18,10 @@ class SVGWidget(Scatter):
 class InstructionSVGWidgetCache(object):
 
     """A chache to create widgets with instruction SVGs fast."""
-    
+
     def __init__(self, svg_cache=None):
         """Create an InstructionSVGWidgetCache.
-        
+
         :param svg_cache: a :class:`
           knitingpattern.convert.InstructionSVGCache.InstructionSVGCache` or
           :obj:`None` if :func:`
@@ -33,11 +33,11 @@ class InstructionSVGWidgetCache(object):
         self._svg_cache = svg_cache
         self._get_instruction_id = self._svg_cache.get_instruction_id
         self._svg_widget_cache = {}
-    
+
     def create_svg_widget(self, instruction, **kw):
         """Create an SVGWidget for the instruction.
-        
-        :param instruction: an 
+
+        :param instruction: an
           :class:`~knittingpattern.Instruction.Instruction`
         :param dict kw: they keyword arguments to pass to the widget
         :rtype: SVGWidget
@@ -55,7 +55,7 @@ class InstructionSVGWidgetCache(object):
 
 def default_cache():
     """Return the default InstructionSVGWidgetCache.
-    
+
     :rtype: InstructionSVGWidgetCache
     """
     global _cache

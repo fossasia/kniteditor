@@ -7,5 +7,3 @@ def main(*args, **kw):
     """Open the kniteditor window."""
     from .EditorWindow import main
     main()
-
-    

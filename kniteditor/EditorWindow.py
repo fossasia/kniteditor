@@ -6,13 +6,15 @@ from .KnittingPatternWidget import KnittingPatternWidget
 from kivy.uix.pagelayout import PageLayout
 from kivy.uix.button import Button
 
+
 class EditorWindow(App):
 
     """The editor window."""
 
     def build(self):
         """Build the UI elements."""
-        self._patterns = knittingpattern.load_from().example("negative-rendering.json")
+        file = "negative-rendering.json"
+        self._patterns = knittingpattern.load_from().example(file)
         pattern = self._patterns.patterns.at(0)
         self.pattern = KnittingPatternWidget()
         self.pattern.show_pattern(pattern)
