@@ -1,0 +1,72 @@
+# see https://packaging.python.org/appveyor/#adding-appveyor-support-to-your-project
+environment:
+
+    # For Python versions available on Appveyor, see
+    # http://www.appveyor.com/docs/installed-software#python
+    # The list here is complete (excluding Python 2.6, which
+    # isn't covered by this document) at the time of writing.
+    
+    # we only need Python 3.4 for kivy
+    - PYTHON: "C:\\Python34"
+
+
+install:
+  # We need wheel installed to build wheels
+  - "%PYTHON%\\python.exe -m pip install wheel"
+  # Install Cython for kivy
+  # See https://pypi.python.org/pypi/Cython for the option
+  - "%PYTHON%\\python.exe -m pip install Cython --install-option=\"--no-cython-compile\""
+
+build: off
+
+test_script:
+  # Put your test command here.
+  # If you don't need to build C extensions on 64-bit Python 3.3 or 3.4,
+  # you can remove "build.cmd" from the front of the command, as it's
+  # only needed to support those cases.
+  # Note that you must use the environment variable %PYTHON% to refer to
+  # the interpreter you're using - Appveyor does not do anything special
+  # to put the Python evrsion you want to use on PATH.
+  - "%PYTHON%\\python.exe setup.py test"
+
+after_test:
+  # This step builds your wheels.
+  # Again, you only need build.cmd if you're building C extensions for
+  # 64-bit Python 3.3/3.4. And you need to use %PYTHON% to get the correct
+  # interpreter
+  - "%PYTHON%\\python.exe setup.py bdist_wheel sdist bdist_wininst"
+
+artifacts:
+  # bdist_wheel puts your built wheel in the dist directory
+- path: dist/*
+  name: distribution
+- path: windows-build/dist/Installer/KnitEditorInstaller.exe
+  name: installer
+- path: windows-build/dist/KnitEditor
+  name: standalone
+
+on_success:
+#  You can use this step to upload your artifacts to a public website.
+#  See Appveyor's documentation for more details. Or you can simply
+#  access your wheels from the Appveyor "artifacts" tab for your build.
+  - set HOME=.
+  # in https://ci.appveyor.com/project/niccokunzmann/knittingpattern/settings/environment
+  # set the variables for the python package index http://pypi.python.org/
+  #   PYPI_USERNAME
+  #   PYPI_PASSWORD
+  - "%PYTHON%\\python.exe -c \"import os;print('[distutils]\\r\\nindex-servers =\\r\\n    pypi\\r\\n\\r\\n[pypi]\\r\\nusername:{PYPI_USERNAME}\\r\\npassword:{PYPI_PASSWORD}\\r\\n'.format(**os.environ))\" > %HOME%\\.pypirc"
+  # upload to pypi
+  # check for the tags
+  # see http://www.appveyor.com/docs/branches#build-on-tags-github-and-gitlab-only
+  - echo %APPVEYOR_REPO_TAG%
+  - echo %APPVEYOR_REPO_TAG_NAME%
+  - "IF %APPVEYOR_REPO_TAG% == true ( FOR /F %%V IN ('%PYTHON%\\python.exe setup.py --version') DO ( IF \"v%%V\" == \"%APPVEYOR_REPO_TAG_NAME%\" ( %PYTHON%\\python.exe setup.py sdist bdist_wininst upload ) ELSE ( echo \"Invalid tag %APPVEYOR_REPO_TAG_NAME% should be v%%V.\" ) ) ) ELSE ( echo \"Normal build without PyPi deployment.\" )"
+  - windows-installer/build.bat
+
+deploy:
+- provider: GitHub
+  tag: $(APPVEYOR_REPO_TAG_NAME)
+  auth_token:
+    secure: MwXRSM+5tbGcYRBOXit2J3L063fkU071wMQkav9vQO6aWq9c0/CeQaPGCJ71CQcv7De9p2eurN9ViNIucXZaHsMscix5HDW5GZ2zeJMqriQ=
+  artifact: installer
+  force_update: true
