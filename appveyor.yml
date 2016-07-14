@@ -83,3 +83,16 @@ deploy:
   on:
     branch: master                 # release from master branch only
     appveyor_repo_tag: true        # deploy on tag push only
+- provider: GitHub
+  # http://www.appveyor.com/docs/deployment/github
+  tag: $(APPVEYOR_REPO_TAG_NAME)
+  description: "Release $(APPVEYOR_REPO_TAG_NAME)"
+  auth_token:
+    secure: j1EbCI55pgsetM/QyptIM/QDZC3SR1i4Xno6jjJt9MNQRHsBrFiod0dsuS9lpcC7
+  artifact: standalone
+  force_update: true
+  draft: false
+  prerelease: false
+  on:
+    branch: master                 # release from master branch only
+    appveyor_repo_tag: true        # deploy on tag push only
