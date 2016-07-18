@@ -40,10 +40,10 @@ pip3 install --user -r ../requirements.txt
 pip3 install --user -r ../test-requirements.txt
 
 # same as the windows build
-pip3 install --user pyinstaller
+# pip3 install --user pyinstaller
 ( cd .. ; setup.py sdist ; pip3 install --user dist/kniteditor-*.tar.gz ; )
-
-python3 -m PyInstaller KnitEditor.spec
+rm -rf build dist
+#python3 -m PyInstaller KnitEditor.spec
 
 
 
