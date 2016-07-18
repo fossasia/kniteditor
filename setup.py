@@ -119,10 +119,12 @@ class LinkIntoSitePackagesCommand(Command):
                   self.library_path
               ))
         try:
-            if "win" in sys.platform:
-                self.run_windows_link()
-            elif "linux" == sys.platform:
+            if "linux" == sys.platform:
                 self.run_linux_link()
+            elif "darwin" == sys.platform:
+                self.run_mac_link()
+            elif "win" in sys.platform:
+                self.run_windows_link()
             else:
                 self.run_other_link()
         except:
@@ -135,7 +137,7 @@ class LinkIntoSitePackagesCommand(Command):
         subprocess.check_call(["sudo", "ln", "-f", "-s", "-t",
                                self.site_packages[0], self.library_path])
 
-    run_other_link = run_linux_link
+    run_other_link = run_mac_link = run_linux_link
 
     def run_windows_link(self):
         path = os.path.join(self.site_packages[0], PACKAGE_NAME)
