@@ -2,8 +2,7 @@ import sys
 
 
 def main():
-    from kniteditor import main
-    main()
+    __import__("kniteditor").main()
 
 if len(sys.argv) == 1:
     try:

@@ -47,8 +47,8 @@ kivy -m pip install --user py2app==0.10
 pip install virtualenv
 
 kivy -m pip install --user git+http://github.com/kivy/buildozer
+kivy -m pip install --user docopt sh
 
-
-
-
+sudo /usr/bin/python -m easy_install pip
+sudo /usr/bin/python -m pip install docopt sh
 
