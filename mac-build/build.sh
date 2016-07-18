@@ -45,6 +45,11 @@ pip3 install --user -r ../test-requirements.txt
 rm -rf build dist
 #python3 -m PyInstaller KnitEditor.spec
 
+python3 setup.py py2app
 
+
+# see http://stackoverflow.com/a/367826/1320237
+# create the .dmg file
+hdiutil create -srcfolder dist/KnitEditor.app dist/KnitEditor.dmg
 
 
