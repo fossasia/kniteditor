@@ -14,6 +14,8 @@ if len(sys.argv) == 1:
         while 1:
             try:
                 exec(input(">>> "))
+            except (KeyboardInterrupt, SystemExit):
+                raise
             except:
                 traceback.print_exc()
 else:
