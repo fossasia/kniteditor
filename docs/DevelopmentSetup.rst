@@ -81,8 +81,26 @@ After installation you can run
 ``pip-sync`` uninstalls every package you do not need and 
 writes the fix package versions to the requirements files.
 
-Continuous Integration to Pypi
-------------------------------
+Continuous Integration
+----------------------
+
+Motivation
+~~~~~~~~~~
+
+Deployment is automized by `Travis
+<https://travis-ci.org/AllYarnsAreBeautiful/kniteditor>`__ and `AppVeyor
+<https://ci.appveyor.com/project/AllYarnsAreBeautiful/kniteditor>`__.
+In order to ease the deployment for you, the developer, only a new tag needs to
+be created and a new release is uploaded to `Github
+<https://github.com/AllYarnsAreBeautiful/kniteditor/releases>`__ and `PyPi
+<https://pypi.python.org/pypi/kniteditor>`__.
+Travis and AppVeyor build the corresponding executables and upload them
+automatically. No special setup is required to create the executables yourself.
+However, in case you wish to create the executables yourself, have a look into the
+corresponding build folders in the repository root.
+
+How To Deploy
+~~~~~~~~~~~~~
 
 Before you put something on `Pypi
 <https://pypi.python.org/pypi/kniteditor>`__, ensure the following:
