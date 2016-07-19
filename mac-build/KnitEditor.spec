@@ -35,7 +35,7 @@ exe = EXE(pyz,
           upx=True,
           console=True )
 coll = COLLECT(exe,
-               Tree("/Applications/Kivy.app/Contents/Frameworks/SDL2_ttf.framework/Versions/A/Frameworks/FreeType.framework"),
+#               Tree("/Applications/Kivy.app/Contents/Frameworks/SDL2_ttf.framework/Versions/A/Frameworks/FreeType.framework"),
                a.binaries,
                a.zipfiles,
                a.datas,
