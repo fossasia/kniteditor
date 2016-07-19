@@ -6,6 +6,7 @@ matrix:
     - os: linux
       python: 3.4
     - os: osx
+      language: generic
 #  allow_failures:
 #    - os: osx
 
