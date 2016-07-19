@@ -28,7 +28,7 @@ python3 setup.py bdist_wheel
 python3 -m pip uninstall -y wheel
 
 echo "# install from the zip file to see if files were forgotten"
-python3 -m pip install $USER dist/kniteditor-${PACKAGE_VERSION}.zip
+python3 -m pip install $USER --upgrade dist/kniteditor-${PACKAGE_VERSION}.zip
 
 echo "# install the test requirements"
 python3 -m pip install $USER -r test-requirements.txt
