@@ -10,7 +10,7 @@ index-servers =
 [pypi]
 username:{PYPI_USERNAME}
 password:{PYPI_PASSWORD}
-""".format(**os.environ))
+""".format(**os.environ)
 
 with open(pypirc, "w") as file:
     file.write(pypi_configuration)
