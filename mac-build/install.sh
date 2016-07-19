@@ -13,15 +13,20 @@ brew install sdl2 sdl2_image sdl2_ttf sdl2_mixer gstreamer
 
 echo "# install python3"
 brew install python3
+python3 -m pip install --upgrade pip
+
+echo "# install pygame"
+# see https://bitbucket.org/pygame/pygame/issues/82/homebrew-on-leopard-fails-to-install#comment-636765
+brew install sdl sdl_image sdl_mixer sdl_ttf smpeg portmidi
+brew install mercurial
+python3 -m pip install $USER hg+http://bitbucket.org/pygame/pygame
 
 echo "# install requirements"
-python3 -m pip install --upgrade pip
 python3 -m pip install $USER -I Cython==0.23 --install-option="--no-cython-compile"
 USE_OSX_FRAMEWORKS=0 python3 -m pip install $USER kivy
 python3 -m pip uninstall -y Cython==0.23
 python3 -m pip install $USER -r ../requirements.txt
 python3 -m pip install $USER -r ../test-requirements.txt
-python3 -m pip install $USER pygame
 python3 -m pip install $USER PyInstaller
 
 ./build.sh $USER
