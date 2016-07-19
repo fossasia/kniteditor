@@ -11,6 +11,7 @@ set HOME=.
 REM upload to pypi
 REM check for the tags
 REM see http://www.appveyor.com/docs/branches#build-on-tags-github-and-gitlab-only
+cd ..
 echo APPVEYOR_REPO_TAG: %APPVEYOR_REPO_TAG%
 echo APPVEYOR_REPO_TAG_NAME: %APPVEYOR_REPO_TAG_NAME%
 IF %APPVEYOR_REPO_TAG% == true (
