@@ -17,21 +17,21 @@ cd ..
 # install kivy https://kivy.org/docs/installation/installation-linux.html
 # see the cython package https://pypi.python.org/pypi/Cython
 echo "# install Cython to build kivy"
-python3 -m pip install "$USER" Cython --install-option="--no-cython-compile"
-python3 -m pip install "$USER" kivy
-python3 -m pip install "$USER" kivy-garden
+python3 -m pip install $USER Cython --install-option="--no-cython-compile"
+python3 -m pip install $USER kivy
+python3 -m pip install $USER kivy-garden
 
 echo "# build the distribution"
-python3 -m pip install "$USER" wheel
+python3 -m pip install $USER wheel
 python3 setup.py sdist --formats=zip
 python3 setup.py bdist_wheel
 python3 -m pip uninstall -y wheel
 
 echo "# install from the zip file to see if files were forgotten"
-python3 -m pip install "$USER" dist/kniteditor-${PACKAGE_VERSION}.zip
+python3 -m pip install $USER dist/kniteditor-${PACKAGE_VERSION}.zip
 
 echo "# install the test requirements"
-python3 -m pip install -r test-requirements.txt
+python3 -m pip install $USER -r test-requirements.txt
 
 echo "# remove the build folder because it creates problems for py.test"
 rm -rf build

@@ -15,16 +15,16 @@ cd "$HERE"
   python3 -m pip uninstall -y kniteditor || true
 
   echo "# build the distribution"
-  python3 -m pip install "$USER" wheel
+  python3 -m pip install $USER wheel
   python3 setup.py sdist --formats=zip
   python3 setup.py bdist_wheel
   python3 -m pip uninstall -y wheel
 
   echo "# install the current version from the build"
-  python3 -m pip install "$USER" --upgrade dist/kniteditor-*.zip
+  python3 -m pip install $USER --upgrade dist/kniteditor-*.zip
 
   echo "# install test requirements"
-  python3 -m pip install "$USER" --upgrade -r test-requirements.txt
+  python3 -m pip install $USER --upgrade -r test-requirements.txt
 )
 
 echo "# build the app"
