@@ -27,7 +27,7 @@ If you have run the ``install.sh`` file already, you can run
 
 .. code:: bash
 
-     ./build.sh
+     ./build.sh --user
 
 to skip the obsolete installation steps.
 
