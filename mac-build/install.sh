@@ -8,9 +8,6 @@ HERE="`dirname \"$0\"`"
 USER="$1"
 cd "$HERE"
 
-echo "# install kivy dependencies"
-brew install sdl2 sdl2_image sdl2_ttf sdl2_mixer gstreamer
-
 echo "# install python3"
 brew install python3
 python3 -m pip install --upgrade pip
@@ -20,6 +17,9 @@ echo "# install pygame"
 brew install sdl sdl_image sdl_mixer sdl_ttf portmidi
 brew install mercurial
 python3 -m pip install $USER hg+http://bitbucket.org/pygame/pygame
+
+echo "# install kivy dependencies"
+brew install sdl2 sdl2_image sdl2_ttf sdl2_mixer gstreamer
 
 echo "# install requirements"
 python3 -m pip install $USER -I Cython==0.23 --install-option="--no-cython-compile"
