@@ -32,7 +32,9 @@ python3 -m PyInstaller KnitEditor.spec
 
 echo "# create the .dmg file"
 # see http://stackoverflow.com/a/367826/1320237
-# create the .dmg file
-rm -f dist/KnitEditor.dmg
-hdiutil create -srcfolder dist/KnitEditor.app dist/KnitEditor.dmg
+KNITEDITOR_DMG="`pwd`/dist/KnitEditor.dmg"
+rm -f "$KNITEDITOR_DMG"
+hdiutil create -srcfolder dist/KnitEditor.app "$KNITEDITOR_DMG"
+
+echo "The installer can be found in \"$KNITEDITOR_DMG\"."
 
