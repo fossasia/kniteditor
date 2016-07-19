@@ -3,21 +3,21 @@
 set -e
 
 cd "`dirname \"$0\"`"
-cd ..
 
 echo "# Test with pep8 and add coverage."
 # The docs folder is also tested.
-py.test --cov=kniteditor --pep8
-
-echo "# test import from everywhere"
 (
-  cd /
-  python3 -c "import kniteditor;print(\"Module kniteditor was successfully imported.\")"
+  cd ..
+  py.test --cov=kniteditor --pep8
 )
 
-echo "# run tests from installation"
 (
   cd /
+
+  echo "# test import from everywhere"
+  python3 -c "import kniteditor;print(\"Module kniteditor was successfully imported.\")"
+
+  echo "# run tests from installation"
   py.test --pyargs kniteditor
 )
 
