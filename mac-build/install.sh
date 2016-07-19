@@ -15,7 +15,7 @@ python3 -m pip install --upgrade pip
 echo "# install pygame"
 # see https://bitbucket.org/pygame/pygame/issues/82/homebrew-on-leopard-fails-to-install#comment-636765
 brew install sdl sdl_image sdl_mixer sdl_ttf portmidi
-brew install mercurial
+brew install mercurial || true
 python3 -m pip install $USER hg+http://bitbucket.org/pygame/pygame
 
 echo "# install kivy dependencies"
