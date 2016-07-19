@@ -32,12 +32,19 @@ deploy:
   # created with travis command line tool
   # https://docs.travis-ci.com/user/deployment/pypi
   # $ travis setup pypi
-  provider: pypi
-  user: niccokunzmann2
-  password:
-    secure: "q3aUT6A5Mvkdg4JPZQGYQSLi7i0Kk3/raebav1gVC0CZBEPMOBRbuL1ZgpHV7wM4emqr1p2mTl3R4YjCn8Kn1J7zWtmWUBnMystbW8ojQ4ED3qk+zHnI85Zk/TE5N4KlRN0iAGFPeFZpgXTr6gpiFmLkgvaGhAKg4HWMOOIZ9FENz/XtJU5XxCjLuBykIy+YeoVDaJPyX05rfrUxN5GfxEhBiEjpF2UL1M6fYv+3Orn4AgQpZu0DGTItARXanE8J9L1vqU17tGmBwLmXyklbG/7lwd/c295COxHgEQbcZeOl/Dbu9SE8nvBtZd3TiR9K05BVWgQAheClf980ncjI9eCJsmJC3s3XMucTTWTuZEucenfvGTE0h6mKEEvgEMREfr9LJR2+teT7vlocUWpscLJEdTShJvt1BtUVeOXLdIEjTvPNmU0ItZ5qipoaWrsH0q9l85c02cLK/yqkN11hn9WnLH7AWpRoj51W4sXjcfKX341MJqqHaXGcPrufkNP6g0SaGdqA0kkK7iMA+SYCeUI+K9UzJbmlgVbiIm/blVqK1eKcuB652/apPXi72EDVXhg9Q5LphGfNtlZ09iPEZYKTo0NsCZ+AXcoyoPE7Y+zqsky33lZcaRxPnY1Ba2f9/1MTU+uK6FlHuhi/N+y55HVCCG41jaMUNq5BcXeFHo4="
-  on:
-    tags: true
-    distributions: sdist bdist_wininst bdist_wheel
-    repo: AllYarnsAreBeautiful/kniteditor
-
+  - provider: pypi
+    user: niccokunzmann2
+    password:
+      secure: "q3aUT6A5Mvkdg4JPZQGYQSLi7i0Kk3/raebav1gVC0CZBEPMOBRbuL1ZgpHV7wM4emqr1p2mTl3R4YjCn8Kn1J7zWtmWUBnMystbW8ojQ4ED3qk+zHnI85Zk/TE5N4KlRN0iAGFPeFZpgXTr6gpiFmLkgvaGhAKg4HWMOOIZ9FENz/XtJU5XxCjLuBykIy+YeoVDaJPyX05rfrUxN5GfxEhBiEjpF2UL1M6fYv+3Orn4AgQpZu0DGTItARXanE8J9L1vqU17tGmBwLmXyklbG/7lwd/c295COxHgEQbcZeOl/Dbu9SE8nvBtZd3TiR9K05BVWgQAheClf980ncjI9eCJsmJC3s3XMucTTWTuZEucenfvGTE0h6mKEEvgEMREfr9LJR2+teT7vlocUWpscLJEdTShJvt1BtUVeOXLdIEjTvPNmU0ItZ5qipoaWrsH0q9l85c02cLK/yqkN11hn9WnLH7AWpRoj51W4sXjcfKX341MJqqHaXGcPrufkNP6g0SaGdqA0kkK7iMA+SYCeUI+K9UzJbmlgVbiIm/blVqK1eKcuB652/apPXi72EDVXhg9Q5LphGfNtlZ09iPEZYKTo0NsCZ+AXcoyoPE7Y+zqsky33lZcaRxPnY1Ba2f9/1MTU+uK6FlHuhi/N+y55HVCCG41jaMUNq5BcXeFHo4="
+    on:
+      tags: true
+      repo: AllYarnsAreBeautiful/kniteditor
+      distributions: sdist bdist_wininst bdist_wheel
+  - provider: releases
+    api_key:
+      secure: v18ZcrXkIMgyb7mI349fPy6vBKw1K4k9DjnikrMFe5NFVwf98anVzyrlKgor54yfrK7k5xakYdWWHYwN4qD7lcCKS1w5Ww+QzWWhUWKgfq4oDksqN4dhPQWmJPuFmqnFZAql0cxDGL16ZPMSB0aT+SK1ow7egG9kmWPVGToomvZqDw+EQTlE76+XhAMVfi+I2ibA8/c78W8bTEQkuvQa9OoPVZGAZlpFn6SEAqeujDE4F1MfphTw/RNuzPHowX+xsspEiuQZMbTaBV+xqWDwbVSHgEN56aDXYmShFIDIw7WI95IBtizTHcPBDb941+tpUNfmr6hp3+n8OutzwXvvHppRFxcDic4klDyYg3134Le7TFAUwAAygIN6yZLn/dQ46UjJla/rmkzBPipaQtSe4WxOKTLaqzRg4jhSU6lEMVw83fS6hmWQbn3dzcEbBLqZ+kSwEzkTqBuX6HJ4YXDwbjcvVfBVcKsUMlsOgeaidyPcR/y4zAL5lPkJoktibeMbqOtrbL6Wf+7s+giZ/LBdsvbTT6TL8T+TXj3JHtpI+w2wniCvsbKq0M8x2+8TIpsEksTvQRBFabgvtp50P6uLHeMqpgPNoK7nqrKWJYCXMpBmIGYWXhKul4/PL/TVpxtg2f/zfg08qHju7mWnAZYApjTV/EjOwWCtqn/hm2CfPFo=
+    file: mac-build/dist/KnitEditor.dmg
+    on:
+      tags: true
+      condition: "$TRAVIS_OS_NAME" == "osx"
+      repo: AllYarnsAreBeautiful/kniteditor
