@@ -17,7 +17,7 @@ cd ..
 # install kivy https://kivy.org/docs/installation/installation-linux.html
 # see the cython package https://pypi.python.org/pypi/Cython
 echo "# install Cython to build kivy"
-python3 -m pip install $USER Cython --install-option="--no-cython-compile"
+python3 -m pip install $USER Cython==0.23 --install-option="--no-cython-compile"
 python3 -m pip install $USER kivy
 python3 -m pip install $USER kivy-garden
 
