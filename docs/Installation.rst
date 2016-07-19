@@ -3,6 +3,27 @@
 kniteditor Installation Instructions
 ====================================
 
+This document aims at showing all the ways that the knit editor can be installed.
+
+Download
+--------
+
+You can download the `latest installers
+<https://github.com/AllYarnsAreBeautiful/kniteditor/releases/latest>`__
+from the `github releases
+<https://github.com/AllYarnsAreBeautiful/kniteditor/releases>`__.
+This includes these binaries:
+
+- Mac OSX App `"KnitEditor.dmg" <https://github.com/AllYarnsAreBeautiful/kniteditor/releases/latest>`__
+- Windows Installer `"KnitEditorInstaller.exe" <https://github.com/AllYarnsAreBeautiful/kniteditor/releases/latest>`__
+- Windows standalone `"standalone.zip" <https://github.com/AllYarnsAreBeautiful/kniteditor/releases/latest>`__
+
+All download locations are listed here:
+
+- `AppVeyor <https://ci.appveyor.com/project/AllYarnsAreBeautiful/kniteditor/build/artifacts>`__
+- `The Python Package Index <https://pypi.python.org/pypi/kniteditor>`__
+- `Github Releases <https://github.com/AllYarnsAreBeautiful/kniteditor/releases>`__
+
 Kivy Installation
 -----------------
 
