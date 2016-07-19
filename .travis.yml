@@ -12,8 +12,8 @@ matrix:
 #    - os: osx
 
 install:
-  - if [ "$TRAVIS_OS_NAME" == "osx"   ] ; then   mac-build/build.sh ; fi
-  - if [ "$TRAVIS_OS_NAME" == "linux" ] ; then linux-build/build.sh ; fi
+  - if [ "$TRAVIS_OS_NAME" == "osx"   ] ; then   mac-build/install.sh ; fi
+  - if [ "$TRAVIS_OS_NAME" == "linux" ] ; then linux-build/install.sh ; fi
 
 script:
   - if [ "$TRAVIS_OS_NAME" == "osx"   ] ; then   mac-build/test.sh ; fi
