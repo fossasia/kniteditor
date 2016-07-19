@@ -1,14 +1,8 @@
 import os
 
-pypi_template = """
-[distutils]
-index-servers =
-    pypi
-
-[pypi]
-username:{PYPI_USERNAME}
-password:{PYPI_PASSWORD}
-"""
+pypi_template = \
+    "\\r\\n[distutils]\\r\\nindex-servers =\\r\\n    pypi\\r\\n\\r\\n" \
+    "[pypi]\\r\\nusername:{PYPI_USERNAME}\\r\\npassword:{PYPI_PASSWORD}\\r\\n"
 
 if __name__ == "__main__":
     pypirc = os.path.join(os.environ["HOME"], ".pypirc")
