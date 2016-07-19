@@ -37,6 +37,7 @@ deploy:
       secure: "q3aUT6A5Mvkdg4JPZQGYQSLi7i0Kk3/raebav1gVC0CZBEPMOBRbuL1ZgpHV7wM4emqr1p2mTl3R4YjCn8Kn1J7zWtmWUBnMystbW8ojQ4ED3qk+zHnI85Zk/TE5N4KlRN0iAGFPeFZpgXTr6gpiFmLkgvaGhAKg4HWMOOIZ9FENz/XtJU5XxCjLuBykIy+YeoVDaJPyX05rfrUxN5GfxEhBiEjpF2UL1M6fYv+3Orn4AgQpZu0DGTItARXanE8J9L1vqU17tGmBwLmXyklbG/7lwd/c295COxHgEQbcZeOl/Dbu9SE8nvBtZd3TiR9K05BVWgQAheClf980ncjI9eCJsmJC3s3XMucTTWTuZEucenfvGTE0h6mKEEvgEMREfr9LJR2+teT7vlocUWpscLJEdTShJvt1BtUVeOXLdIEjTvPNmU0ItZ5qipoaWrsH0q9l85c02cLK/yqkN11hn9WnLH7AWpRoj51W4sXjcfKX341MJqqHaXGcPrufkNP6g0SaGdqA0kkK7iMA+SYCeUI+K9UzJbmlgVbiIm/blVqK1eKcuB652/apPXi72EDVXhg9Q5LphGfNtlZ09iPEZYKTo0NsCZ+AXcoyoPE7Y+zqsky33lZcaRxPnY1Ba2f9/1MTU+uK6FlHuhi/N+y55HVCCG41jaMUNq5BcXeFHo4="
     on:
       tags: true
+      condition:  "\"$TRAVIS_OS_NAME\" == \"linux\""
       repo: AllYarnsAreBeautiful/kniteditor
   - provider: releases
     api_key:
