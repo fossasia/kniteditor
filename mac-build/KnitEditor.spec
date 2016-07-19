@@ -15,7 +15,7 @@ kwargs["datas"] = added_files
 kwargs["hiddenimports"] += ['queue', 'unittest', 'unittest.mock']
 
 
-a = Analysis(['_KnitEditor.py'],
+a = Analysis(['KnitEditor.py'],
              pathex=[],
              binaries=None,
              win_no_prefer_redirects=False,
