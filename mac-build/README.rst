@@ -1,5 +1,5 @@
-mac-installer
-=============
+mac-build
+=========
 
 This installer is based on `the kivy documentation
 <https://kivy.org/docs/guide/packaging-osx.html>`.
@@ -31,4 +31,14 @@ If you have run the ``install.sh`` file already, you can run
 
 to skip the obsolete installation steps.
 
+Uninstall
+---------
+
+If you really want to uninstall everything that was installed, you can run:
+
+.. code:: bash
+
+    ./uninstall.sh
+
+Note that you may want to read what it does, before. It might be that you do not want to set your computer back so much.
 
