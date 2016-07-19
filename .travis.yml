@@ -7,8 +7,8 @@ matrix:
       python: 3.4
     - os: osx
       language: generic
-#  allow_failures:
-#    - os: osx
+  allow_failures:
+    - os: osx
 
 install:
   - if [ "$TRAVIS_OS_NAME" == "osx"   ] ; then   mac-build/install.sh ; fi
