@@ -21,7 +21,7 @@ USE_OSX_FRAMEWORKS=0 python3 -m pip install $USER kivy
 python3 -m pip uninstall -y Cython==0.23
 python3 -m pip install $USER -r ../requirements.txt
 python3 -m pip install $USER -r ../test-requirements.txt
-python3 -m pip install $USER pygame==1.9.2b4
+python3 -m pip install $USER pygame
 python3 -m pip install $USER PyInstaller
 
 ./build.sh $USER
