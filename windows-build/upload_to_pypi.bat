@@ -6,7 +6,7 @@ REM set the variables for the python package index http://pypi.python.org/
 REM   PYPI_USERNAME
 REM   PYPI_PASSWORD
 SET HOME=.
-%PYTHON%\\python.exe setup_pypirc.py || exit 1
+%PYTHON%\\python.exe -c "import os;print('[distutils]\\r\\nindex-servers =\\r\\n    pypi\\r\\n\\r\\n[pypi]\\r\\nusername:{PYPI_USERNAME}\\r\\npassword:{PYPI_PASSWORD}\\r\\n'.format(**os.environ))" > %HOME%\\.pypirc
 
 REM upload to pypi
 REM check for the tags
