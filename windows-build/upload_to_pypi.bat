@@ -5,7 +5,6 @@ REM in https://ci.appveyor.com/project/niccokunzmann/knittingpattern/settings/en
 REM set the variables for the python package index http://pypi.python.org/
 REM   PYPI_USERNAME
 REM   PYPI_PASSWORD
-set HOME=.
 %PYTHON%\\python.exe setup_pypirc.py || exit 1
 
 REM upload to pypi

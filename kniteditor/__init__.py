@@ -1,6 +1,6 @@
 """An editor for knitting projects."""
 
-__version__ = "0.0.14"
+__version__ = "0.0.15"
 
 
 def main(*args, **kw):
