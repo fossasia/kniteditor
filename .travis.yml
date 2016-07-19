@@ -4,10 +4,8 @@ language: python
 matrix:
   include:
     - os: linux
-      sudo: required
       python: 3.4
     - os: osx
-      language: generic
 #  allow_failures:
 #    - os: osx
 
@@ -39,12 +37,11 @@ deploy:
     on:
       tags: true
       repo: AllYarnsAreBeautiful/kniteditor
-      distributions: sdist bdist_wininst bdist_wheel
   - provider: releases
     api_key:
       secure: v18ZcrXkIMgyb7mI349fPy6vBKw1K4k9DjnikrMFe5NFVwf98anVzyrlKgor54yfrK7k5xakYdWWHYwN4qD7lcCKS1w5Ww+QzWWhUWKgfq4oDksqN4dhPQWmJPuFmqnFZAql0cxDGL16ZPMSB0aT+SK1ow7egG9kmWPVGToomvZqDw+EQTlE76+XhAMVfi+I2ibA8/c78W8bTEQkuvQa9OoPVZGAZlpFn6SEAqeujDE4F1MfphTw/RNuzPHowX+xsspEiuQZMbTaBV+xqWDwbVSHgEN56aDXYmShFIDIw7WI95IBtizTHcPBDb941+tpUNfmr6hp3+n8OutzwXvvHppRFxcDic4klDyYg3134Le7TFAUwAAygIN6yZLn/dQ46UjJla/rmkzBPipaQtSe4WxOKTLaqzRg4jhSU6lEMVw83fS6hmWQbn3dzcEbBLqZ+kSwEzkTqBuX6HJ4YXDwbjcvVfBVcKsUMlsOgeaidyPcR/y4zAL5lPkJoktibeMbqOtrbL6Wf+7s+giZ/LBdsvbTT6TL8T+TXj3JHtpI+w2wniCvsbKq0M8x2+8TIpsEksTvQRBFabgvtp50P6uLHeMqpgPNoK7nqrKWJYCXMpBmIGYWXhKul4/PL/TVpxtg2f/zfg08qHju7mWnAZYApjTV/EjOwWCtqn/hm2CfPFo=
     file: mac-build/dist/KnitEditor.dmg
     on:
       tags: true
-      condition: "$TRAVIS_OS_NAME" == "osx"
+      condition:  "\"$TRAVIS_OS_NAME\" == \"osx\""
       repo: AllYarnsAreBeautiful/kniteditor
