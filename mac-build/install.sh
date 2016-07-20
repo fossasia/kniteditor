@@ -8,8 +8,12 @@ HERE="`dirname \"$0\"`"
 USER="$1"
 cd "$HERE"
 
+brew update
+
 echo "# install python3"
 brew install python3
+echo -n "Python version: "
+python3 --version
 python3 -m pip install --upgrade pip
 
 echo "# install pygame"

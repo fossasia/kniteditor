@@ -21,14 +21,15 @@ cd "$HERE"
   python3 -m pip uninstall -y wheel
 
   echo "# install the current version from the build"
-  python3 -m pip install $USER --upgrade dist/kniteditor-*.zip
+  python3 -m pip install $USER --upgrade dist/kniteditor-`linux-build/package_version`.zip
 
   echo "# install test requirements"
   python3 -m pip install $USER --upgrade -r test-requirements.txt
 )
 
 echo "# build the app"
-python3 -m PyInstaller KnitEditor.spec
+# see https://pythonhosted.org/PyInstaller/usage.html
+python3 -m PyInstaller -d -y KnitEditor.spec
 
 echo "# create the .dmg file"
 # see http://stackoverflow.com/a/367826/1320237
