@@ -1,11 +1,11 @@
 from kniteditor.localization import _, change_language_to, list_languages, \
     DEFAULT_LANGUAGE, current_language
 import pytest
-    
-    
+
+
 def test_current_language_is_default_language():
     assert current_language() == DEFAULT_LANGUAGE
-    
+
 
 def test_default_language_is_english():
     assert DEFAULT_LANGUAGE == "en"
@@ -20,7 +20,7 @@ def test_languages_are_listed(language):
 def test_translate_in_default_language(word, translation):
     assert _(word) == translation
 
-    
+
 @pytest.mark.parametrize("language,word,translation", [
     ("en", "Yes", "Yes"), ("en", "No", "No"),
     ("de", "Yes", "Ja"), ("de", "No", "Nein")])
