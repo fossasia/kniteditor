@@ -1,0 +1,21 @@
+msgid ""
+msgstr ""
+
+msgid "Yes"
+msgstr ""
+
+msgid "No"
+msgstr ""
+
+msgid "Save"
+msgstr ""
+
+msgid "Load"
+msgstr ""
+
+msgid "de_de"
+msgstr ""
+
+msgid "en_us"
+msgstr ""
+
