@@ -68,4 +68,5 @@ def current_language():
 
 change_language_to(DEFAULT_LANGUAGE)
 
-__all__ = ["_", "change_language_to", "list_languages", "DEFAULT_LANGUAGE"]
+__all__ = ["_", "change_language_to", "list_languages", "DEFAULT_LANGUAGE",
+           "current_language"]
