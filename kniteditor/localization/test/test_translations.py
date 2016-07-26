@@ -1,3 +1,4 @@
+import test_localization
 from kniteditor.localization import _, change_language_to, list_languages, \
     DEFAULT_LANGUAGE, current_language
 import pytest
