@@ -29,8 +29,13 @@ class Root(PageLayout):
 
     def load_path(self, path, filenames):
         file_path = filenames[0]
-        self._patterns = knittingpattern.load_from_path(file_path)
-        pattern = self._patterns.patterns.at(0)
+        extension = os.path.splitext(file_path.lower())[1]
+        if extension == ".json":
+            patterns = knittingpattern.load_from_path(file_path)
+        else:
+            converter = knittingpattern.convert_from_image()
+            patterns = converter.path(file_path).knitting_pattern()
+        pattern = patterns.patterns.at(0)
         self.knitting_pattern.show_pattern(pattern)
         self.dismiss_popup()
 
