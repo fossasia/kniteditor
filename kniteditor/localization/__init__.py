@@ -49,7 +49,7 @@ def change_language_to(new_language):
 _supported_languages = []
 for folder_name in os.listdir(_locale_dir):
     folder = os.path.join(_locale_dir, folder_name)
-    if os.path.isdir(folder):
+    if folder_name != _languages_dir and os.path.isdir(folder):
         if "LC_MESSAGES" in os.listdir(folder):
             _supported_languages.append(folder_name)
     del folder, folder_name
@@ -137,6 +137,38 @@ def kivy(string):
     """
     return _(string)
     
+
+def list_translated_languages():
+    """Return a list of translated language names.
+    
+    :rtype: list
+    :return: a list of :func:`translated language names
+      <language_code_to_translation>`
+    """
+    return list(map(language_code_to_translation, list_languages()))
+
+
+def current_translated_language():
+    """The current language as a translated string.
+    
+    :rtype: str
+    :return: the :func:`translated <language_code_to_translation>` version of
+      the :func:`current language <current_language>`
+    """
+    return language_code_to_translation(current_language())
+
+
+def change_language_to_translated(new_language):
+    """Set the language to a translated language name.
+    
+    :param str new_language: a language form :func:`list_translated_languages`
+    :raises ValueError: if :paramref:`new_language` is not listed in
+      :func:`list_translated_languages`
+    """
+    new_language_code = translation_to_language_code(new_language)
+    assert new_language_code in list_languages()
+    change_language_to(new_language_code)
+
 
 DEFAULT_LANGUAGE = "en"  #: the default language to use
 change_language_to(DEFAULT_LANGUAGE)
