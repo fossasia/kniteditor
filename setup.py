@@ -7,7 +7,7 @@ from distutils.core import Command
 import subprocess
 
 PACKAGE_NAME = "kniteditor"
-PACKAGE_NAMES = ["kniteditor"]
+PACKAGE_NAMES = ["kniteditor", "kniteditor.localization"]
 
 HERE = os.path.abspath(os.path.dirname(__file__))
 sys.path.insert(0, HERE)  # for package import

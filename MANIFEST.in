@@ -1,3 +1,4 @@
 recursive-include kniteditor *.py
+recursive-include kniteditor/localization *.mo
 include *requirements.txt
 include LICENSE
