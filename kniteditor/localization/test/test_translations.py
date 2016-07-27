@@ -1,7 +1,9 @@
 import test_localization
 from kniteditor.localization import _, change_language_to, list_languages, \
-    DEFAULT_LANGUAGE, current_language
+    DEFAULT_LANGUAGE, current_language, language_code_to_translation, \
+    translation_to_language_code
 import pytest
+from pytest import raises
 
 
 def test_current_language_is_default_language():
@@ -34,3 +36,42 @@ def test_translate_in_default_language(language, word, translation):
 def test_switching_lamguage_sets_current_language(language):
     change_language_to(language)
     assert current_language() == language
+
+
+@pytest.mark.parametrize("code,translation", [("de", "Deutsch"),
+                                              ("en", "English")])
+def test_language_translation(code, translation):
+    assert language_code_to_translation(code) == translation
+    assert translation_to_language_code(translation) == code
+
+
+@pytest.mark.parametrize("code", ["invalid!!!!", "123"])
+def test_value_error_in_language_code_to_translation(code):
+    with raises(ValueError) as error:
+        language_code_to_translation(code)
+    message = "Invalid language code {}. Expected one of {}.".format(
+        repr(code), ", ".join(map(repr, list_languages())))
+    assert error.value.args[0] == message
+
+
+@pytest.mark.parametrize("code", ["invalid!!!!", "123", "en"])
+def test_value_error_in_translation_to_language_code(code):
+    with raises(ValueError) as error:
+        translation_to_language_code(code)
+    message = "Invalid language name {}. Expected one of {}.".format(
+        repr(code), ", ".join(map(repr, map(language_code_to_translation, 
+                                            list_languages()))))
+    assert error.value.args[0] == message
+
+
+@pytest.mark.parametrize("code", [None, object(), object])
+@pytest.mark.parametrize("function", [language_code_to_translation,
+                                      translation_to_language_code])
+def test_type_error_in_language_code_to_translation(code, function):
+    with raises(TypeError) as error:
+        language_code_to_translation(code)
+    message = "Invalid argument {}. Expected str instance.".format(
+        repr(code))
+    assert error.value.args[0] == message
+
+
