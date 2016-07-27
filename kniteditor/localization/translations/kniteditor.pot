@@ -13,9 +13,6 @@ msgstr ""
 msgid "Load"
 msgstr ""
 
-msgid "de_de"
-msgstr ""
-
-msgid "en_us"
+msgid "Cancel"
 msgstr ""
 

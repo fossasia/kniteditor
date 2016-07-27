@@ -66,7 +66,15 @@ def current_language():
     """
     return _current_language
 
+def kivy(string):
+    """Return a translated, displayable object for the UI.
+    
+    .. seealso:: :func:`_`
+    """
+    return _(string)
+    
+    
 change_language_to(DEFAULT_LANGUAGE)
 
 __all__ = ["_", "change_language_to", "list_languages", "DEFAULT_LANGUAGE",
-           "current_language"]
+           "current_language", "kivy"]

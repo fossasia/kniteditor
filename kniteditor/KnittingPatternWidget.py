@@ -8,6 +8,7 @@ from knittingpattern.convert.Layout import GridLayout
 from .InstructionSVGWidgetCache import default_cache
 from kivy.graphics import Rectangle, Color
 from kivy.graphics.instructions import InstructionGroup
+from kivy.factory import Factory
 
 
 class KnittingPatternWidget(FloatLayout):
@@ -76,6 +77,9 @@ class KnittingPatternWidget(FloatLayout):
         self._mark.add(Rectangle(pos=(x + width, y),
                                  size=(border_width, height)))
         self.canvas.add(self._mark)
+
+
+Factory.register('KnittingPatternWidget', cls=KnittingPatternWidget)
 
 
 __all__ = ["KnittingPatternWidget"]

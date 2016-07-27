@@ -1,0 +1,65 @@
+#:import _ kniteditor.localization.kivy
+
+Root:
+
+    knitting_pattern: knitting_pattern
+    KnittingPatternWidget:
+        id: knitting_pattern
+    BoxLayout:
+        orientation: "vertical"
+        size_hint_y: None
+        height: 30
+        Button:
+            text: _('Load')
+            on_release: root.show_open_file_dialog()
+        Button:
+            text: _('Save')
+            on_release: root.show_save_file_dialog()
+
+
+
+<LoadDialog>:
+    BoxLayout:
+        size: root.size
+        pos: root.pos
+        orientation: "vertical"
+        FileChooserListView:
+            id: filechooser
+
+        BoxLayout:
+            size_hint_y: None
+            height: 30
+            Button:
+                text: _("Cancel")
+                on_release: root.cancel()
+
+            Button:
+                text: _("Load")
+                on_release: root.load(filechooser.path, filechooser.selection)
+
+<SaveDialog>:
+    text_input: text_input
+    BoxLayout:
+        size: root.size
+        pos: root.pos
+        orientation: "vertical"
+        FileChooserListView:
+            id: filechooser
+            on_selection: text_input.text = self.selection and self.selection[0] or ''
+
+        TextInput:
+            id: text_input
+            size_hint_y: None
+            height: 30
+            multiline: False
+
+        BoxLayout:
+            size_hint_y: None
+            height: 30
+            Button:
+                text: _("Cancel")
+                on_release: root.cancel()
+
+            Button:
+                text: _("Save")
+                on_release: root.save(filechooser.path, text_input.text)
