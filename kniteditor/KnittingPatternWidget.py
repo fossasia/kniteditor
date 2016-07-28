@@ -59,7 +59,7 @@ class KnittingPatternWidget(FloatLayout):
         self._flip_x = flip_x
 
     def mark_row(self, row, border_width=1):
-        """Mark a row. Th eold mark is removed."""
+        """Mark a row. The old mark is removed."""
         assert self._pattern, "I can only mark a row if I show a pattern."
         row = self._layout.row_in_grid(row)
         if self._mark:

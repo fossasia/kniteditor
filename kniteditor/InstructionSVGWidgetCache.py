@@ -22,10 +22,10 @@ class InstructionSVGWidgetCache(object):
     def __init__(self, svg_cache=None):
         """Create an InstructionSVGWidgetCache.
 
-        :param svg_cache: a :class:`
-          knitingpattern.convert.InstructionSVGCache.InstructionSVGCache` or
-          :obj:`None` if :func:`
-          knitingpattern.convert.InstructionSVGCache.default_svg_cache`
+        :param svg_cache: an :class:`InstructionSVGCache
+          <knittingpattern.convert.InstructionSVGCache.InstructionSVGCache>` or
+          :obj:`None` if :func:`default_svg_cache
+          <knittingpattern.convert.InstructionSVGCache.default_svg_cache>`
           shall be used
         """
         if svg_cache is None:
