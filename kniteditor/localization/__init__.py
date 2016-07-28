@@ -10,6 +10,7 @@ Functions exported are:
 import os
 import gettext
 from os.path import abspath, join, dirname
+from .observable_translation import ObservableTranslation
 
 _here = dirname(__file__)
 _locale_dir = abspath(join(_here, 'translations'))
@@ -30,7 +31,8 @@ def _(string):
     :rtype: str
     """
     return _locales.gettext(string)
-
+_ = ObservableTranslation(_)
+    
 
 def change_language_to(new_language):
     """Change the language to a language folder in the translations folder.
@@ -40,10 +42,12 @@ def change_language_to(new_language):
     :raises ValueError: if :paramref:`new_language` is not listed by
       :func:`list_languages`
     """
+    assert new_language in list_languages()
     global _locales, _current_language
     _locales = gettext.translation(DOMAIN, _locale_dir,
                                    languages=[new_language])
     _current_language = new_language
+    _.language_changed()
 
 
 _supported_languages = []
@@ -128,14 +132,6 @@ def current_language():
     :rtype: str
     """
     return _current_language
-
-
-def kivy(string):
-    """Return a translated, displayable object for the UI.
-    
-    .. seealso:: :func:`_`
-    """
-    return _(string)
     
 
 def list_translated_languages():
@@ -174,5 +170,7 @@ DEFAULT_LANGUAGE = "en"  #: the default language to use
 change_language_to(DEFAULT_LANGUAGE)
 
 __all__ = ["_", "change_language_to", "list_languages", "DEFAULT_LANGUAGE",
-           "current_language", "kivy", "translate_language", 
-           "language_code_to_translation", "translation_to_language_code"]
+           "current_language", "translate_language", 
+           "language_code_to_translation", "translation_to_language_code",
+           "change_language_to_translated", "current_translated_language",
+           "list_translated_languages"]

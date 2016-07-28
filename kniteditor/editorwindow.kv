@@ -1,4 +1,4 @@
-#:import _ kniteditor.localization.kivy
+#:import _ kniteditor.localization._
 
 Root:
 
@@ -10,10 +10,10 @@ Root:
         size_hint_y: None
         height: 30
         Button:
-            text: _('Load')
+            text: _("Load")
             on_release: root.show_open_file_dialog()
         Button:
-            text: _('Save')
+            text: _("Save")
             on_release: root.show_save_file_dialog()
 
 

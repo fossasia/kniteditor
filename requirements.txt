@@ -4,7 +4,7 @@
 #
 #    pip-compile --output-file requirements.txt requirements.in
 #
-knittingpattern==0.1.11
+knittingpattern==0.1.14
 Pillow==3.2.0             # via knittingpattern
 requests==2.10.0          # via kivy-garden
 webcolors==1.5            # via knittingpattern
