@@ -56,13 +56,13 @@ def test_value_error_in_language_code_to_translation(code):
 
 
 @pytest.mark.parametrize("code", ["invalid!!!!", "123", "en"])
-@pytest.mark.parametrize("function", [change_language_to_translated, 
+@pytest.mark.parametrize("function", [change_language_to_translated,
                                       translation_to_language_code])
 def test_value_error_in_translation_to_language_code(code, function):
     with raises(ValueError) as error:
         function(code)
     message = "Invalid language name {}. Expected one of {}.".format(
-        repr(code), ", ".join(map(repr, map(language_code_to_translation, 
+        repr(code), ", ".join(map(repr, map(language_code_to_translation,
                                             list_languages()))))
     assert error.value.args[0] == message
 

@@ -32,7 +32,7 @@ def _(string):
     """
     return _locales.gettext(string)
 _ = ObservableTranslation(_)
-    
+
 
 def change_language_to(new_language):
     """Change the language to a language folder in the translations folder.
@@ -71,21 +71,21 @@ def list_languages():
 
 def language_code_to_translation(language_code):
     """Translate a language code.
-    
+
     Note that all language names are written in their language so that
     people can read them in their language.
-    
+
     :rtype: str
     :return: the translated language
     :param str language_code: a language code from :func:`list_languages`
     :raises ValueError: if the code is not in :func:`list_languages`
     :raises TypeError: if the code is not a string
-    
+
     .. note:: this operation can be reversed by
       :func:`translation_to_language_code`
-      
+
     .. code:: python
-    
+
         c2 = language_code_to_translation(language_code_to_translation(c1))
         assert c1 == c2
 
@@ -103,7 +103,7 @@ def language_code_to_translation(language_code):
 
 def translation_to_language_code(translated_language_code):
     """Translate a language back to a langugage code.
-    
+
     :param str translated_language_code: a language returned by
       :func:`language_code_to_translation`
     :rtype: str
@@ -132,11 +132,11 @@ def current_language():
     :rtype: str
     """
     return _current_language
-    
+
 
 def list_translated_languages():
     """Return a list of translated language names.
-    
+
     :rtype: list
     :return: a list of :func:`translated language names
       <language_code_to_translation>`
@@ -146,7 +146,7 @@ def list_translated_languages():
 
 def current_translated_language():
     """The current language as a translated string.
-    
+
     :rtype: str
     :return: the :func:`translated <language_code_to_translation>` version of
       the :func:`current language <current_language>`
@@ -156,7 +156,7 @@ def current_translated_language():
 
 def change_language_to_translated(new_language):
     """Set the language to a translated language name.
-    
+
     :param str new_language: a language form :func:`list_translated_languages`
     :raises ValueError: if :paramref:`new_language` is not listed in
       :func:`list_translated_languages`
@@ -170,7 +170,7 @@ DEFAULT_LANGUAGE = "en"  #: the default language to use
 change_language_to(DEFAULT_LANGUAGE)
 
 __all__ = ["_", "change_language_to", "list_languages", "DEFAULT_LANGUAGE",
-           "current_language", "translate_language", 
+           "current_language",
            "language_code_to_translation", "translation_to_language_code",
            "change_language_to_translated", "current_translated_language",
            "list_translated_languages"]

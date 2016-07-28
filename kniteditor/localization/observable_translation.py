@@ -1,4 +1,9 @@
-"""Observable Translations for kivy that change when the language changes."""
+"""Observable Translations for kivy that change when the language changes.
+
+The functionality of this module is highly inspired by
+`kivy-gettext-example <https://github.com/tito/kivy-gettext-example>`.
+
+"""
 from kivy.lang import Observable
 
 
@@ -8,7 +13,7 @@ class ObservableTranslation(Observable):
 
     def __init__(self, translate):
         """Create a new translation object with a translation function.
-        
+
         :param translate: a callable that translates the text. Even when the
           language is changed, it returns the text for the currrent language.
         """
@@ -18,7 +23,7 @@ class ObservableTranslation(Observable):
 
     def __call__(self, text):
         """Call this object to translate text.
-        
+
         :param str text: the text to translate
         :return: the text translated to the current language
         """

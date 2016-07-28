@@ -23,7 +23,7 @@ class Root(PageLayout):
     """This is the root of the application."""
 
     knitting_pattern = ObjectProperty(None)
-        
+
     def show_open_file_dialog(self):
         """Open the file dialog for loading."""
         content = LoadDialog(load=self.load_path, cancel=self.dismiss_popup)
@@ -68,20 +68,19 @@ class EditorWindow(App):
 
     def get_application_config(self):
         """Return the application's configuration directory.
-        
+
         :return: the path to the configuration file
         :rtype: str
-        
+
         .. seealso:: :meth:`kivy.app.App.get_application_config`
         """
         return super().get_application_config('~/.%(appname)s.ini')
 
-    
     def build_config(self, config):
         """Build the configuration.
-        
+
         :param kivy.config.ConfigParser config: the configuration parser
-        
+
         .. seealso:: `Application Configuration
          <https://kivy.org/docs/api-kivy.app.html#application-configuration>`__
         """
@@ -91,16 +90,16 @@ class EditorWindow(App):
 
     def build_settings(self, settings):
         """Create the applications settings dialog.
-        
+
         :param  kivy.uix.settings.Settings settings: the settings for this app
-        
+
         .. seealso:: `Create a settings panel
           <https://kivy.org/docs/api-kivy.app.html#create-a-settings-panel>`__,
           :meth:`kivy.uix.settings.Settings.add_json_panel`,
           :mod:`kivy.uix.settings`
         """
-        settings.add_json_panel(_('KnitEditor'),
-            self.config, data=self.settings_specification)
+        settings.add_json_panel(_('KnitEditor'), self.config,
+                                data=self.settings_specification)
 
     def update_language_from_config(self):
         """Set the current language of the application from the configuration.
@@ -111,37 +110,37 @@ class EditorWindow(App):
     @property
     def settings_specification(self):
         """The settings specification as JSON string.
-        
+
         :rtype: str
         :return: a JSON string
-        
-        
+
+
         """
         settings = [
-            { "type": "title",
-              "title": _("KnitEditor") },
+            {"type": "title",
+             "title": _("KnitEditor")},
 
-            { "type": "options",
-              "title": _("Language"),
-              "desc": _("Choose your language"),
-              "section": "language",
-              "key": LANGUAGE_CODE,
-              "options": list_translated_languages() },
+            {"type": "options",
+             "title": _("Language"),
+             "desc": _("Choose your language"),
+             "section": "language",
+             "key": LANGUAGE_CODE,
+             "options": list_translated_languages()},
         ]
         return json.dumps(settings)
-    
+
     def on_config_change(self, config, section, key, value):
         """The configuration was changed.
-        
+
         :param kivy.config.ConfigParser config: the configuration that was
           changed
         :param str section: the section that was changed
         :param str key: the key in the section that was changed
         :param value: the value this key was changed to
-        
+
         When this method is called, it issued calls to change methods if they
         exist in this order:
-        
+
         - ``config_change_in_section_{section}_key_{key}(value)``
         - ``config_change_in_section_{section}(key, value)``
         """
@@ -151,10 +150,10 @@ class EditorWindow(App):
             getattr(self, key_call)(value)
         elif hasattr(self, section_call):
             getattr(self, section_call)(key, value)
-    
+
     def config_change_in_section_language_key_current(self, new_language):
         """Set the new language of the application.
-        
+
         Same as :func:`kniteditor.localization.change_language_to_translated`
         """
         change_language_to_translated(new_language)
