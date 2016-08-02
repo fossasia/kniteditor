@@ -2,10 +2,26 @@
 
 Root:
 
+    page: 2
     knitting_pattern: knitting_pattern
+    knit_settings: knit_settings
     KnittingPatternWidget:
+        canvas.before:
+            # from http://stackoverflow.com/questions/20872598/kivy-change-background-color-to-white#20872657
+            Color:
+                rgba: 0, 0, 0, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
         id: knitting_pattern
     BoxLayout:
+        canvas.before:
+            # from http://stackoverflow.com/questions/20872598/kivy-change-background-color-to-white#20872657
+            Color:
+                rgba: 0, 0, 0, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
         orientation: "vertical"
         size_hint_y: None
         height: 30
@@ -15,8 +31,99 @@ Root:
         Button:
             text: _("Save")
             on_release: root.show_save_file_dialog()
-
-
+    AYABKnitSettings:
+        colors_layout: colors_layout
+        canvas.before:
+            # from http://stackoverflow.com/questions/20872598/kivy-change-background-color-to-white#20872657
+            Color:
+                rgba: 0, 0, 0, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        orientation: "vertical"
+        size_hint_y: None
+        id: knit_settings
+        BoxLayout:
+            size_hint_y: 1
+            Label:
+                text: _("AYAB Knit Settings")
+        GridLayout:
+            cols: 2
+            Label:
+                text: _("Machine Type:")
+            Button:
+                text: knit_settings.machine_type
+                size_hint_y: None
+                on_release: ayab_machines_dropdown.open(self)
+            DropDown:
+                # TODO: automatically fill them
+                id: ayab_machines_dropdown
+                Button:
+                    text: _("KH910")
+                    size_hint_y: None
+                    height: 44
+                    on_release: knit_settings.machine_type = "KH910"
+                Button:
+                    text: _("KH930")
+                    size_hint_y: None
+                    height: 44
+                    on_release: knit_settings.machine_type = "KH930"
+                Button:
+                    text: _("CK35")
+                    size_hint_y: None
+                    height: 44
+                    on_release: knit_settings.machine_type = "CK35"
+        BoxLayout:
+            id: colors_layout
+        GridLayout:
+            cols: 2
+            Slider:
+                id: left_end_needle_slider
+                min: 0
+                max: 100
+                value: 100 - left_end_needle_input.value
+                step: 1
+            Slider:
+                id: right_end_needle_slider
+                min: 0
+                max: 100
+                value: right_end_needle_input.value
+                step: 1
+            BoxLayout:
+                Label:
+                    canvas.before:
+                        # from http://stackoverflow.com/questions/20872598/kivy-change-background-color-to-white#20872657
+                        Color:
+                            rgba: 0, 0, 0, 1
+                        Rectangle:
+                            pos: self.pos
+                            size: self.size
+                    text: _("left end needle")
+                IntInput:
+                    id: left_end_needle_input
+                    multiline: False
+                    value: 100 - left_end_needle_slider.value
+                    text: "30"
+            BoxLayout:
+                Label:
+                    canvas.before:
+                        # from http://stackoverflow.com/questions/20872598/kivy-change-background-color-to-white#20872657
+                        Color:
+                            rgba: 0, 0, 0, 1
+                        Rectangle:
+                            pos: self.pos
+                            size: self.size
+                    text: _("right end needle")
+                IntInput:
+                    id: right_end_needle_input
+                    multiline: False
+                    value: right_end_needle_slider.value
+                    text: "30"
+        BoxLayout:
+            Label:
+                text: _("Knitting")
+            Switch:
+            
 
 <LoadDialog>:
     BoxLayout:

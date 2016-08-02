@@ -12,6 +12,8 @@ from .dialogs import LoadDialog, SaveDialog
 from .localization import _, list_translated_languages, \
     change_language_to_translated, current_translated_language
 import json
+import AYABKnitSettings
+import IntInput
 
 #: the language code key
 LANGUAGE_CODE = "current"
@@ -23,6 +25,7 @@ class Root(PageLayout):
     """This is the root of the application."""
 
     knitting_pattern = ObjectProperty(None)
+    knit_settings = ObjectProperty(None)
 
     def show_open_file_dialog(self):
         """Open the file dialog for loading."""
@@ -161,6 +164,19 @@ class EditorWindow(App):
     def build(self):
         """Build the application."""
         self.update_language_from_config()
+        
+    def on_start(self):
+        """The application is started.
+        
+        .. seealso:: :meth:`kivy.app.App.on_start`
+        """
+        self.show_example()
+    
+    def show_example(self):
+        """Show an example knitting pattern."""
+        patterns = knittingpattern.load_from().example("block4x4.json")
+        pattern = patterns.patterns.at(0)
+        self.root.knitting_pattern.show_pattern(pattern)
 
 
 def main(argv=sys.argv):

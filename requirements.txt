@@ -6,6 +6,7 @@
 #
 knittingpattern==0.1.14
 Pillow==3.2.0             # via knittingpattern
-requests==2.10.0          # via kivy-garden
 webcolors==1.5            # via knittingpattern
 xmltodict==0.10.2         # via knittingpattern
+AYABInterface==0.0.2
+crc8==0.0.3               # via AYABInterface
