@@ -449,4 +449,5 @@ epub_exclude_files = ['search.html']
 intersphinx_mapping = {
     'https://docs.python.org/3/': None,
     'http://knittingpattern.readthedocs.io/en/latest/': None,
+    'http://pyserial.readthedocs.io/en/latest/': None,
     'https://kivy.org/docs/': None}

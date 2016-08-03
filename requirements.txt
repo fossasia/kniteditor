@@ -10,3 +10,4 @@ webcolors==1.5            # via knittingpattern
 xmltodict==0.10.2         # via knittingpattern
 AYABInterface==0.0.2
 crc8==0.0.3               # via AYABInterface
+pyserial==3.1.1           # via AYABInterface

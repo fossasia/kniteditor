@@ -32,7 +32,11 @@ Root:
             text: _("Save")
             on_release: root.show_save_file_dialog()
     AYABKnitSettings:
+        id: knit_settings
+        machine_type_button: machine_type_button
         colors_layout: colors_layout
+        ayab_machines_dropdown: ayab_machines_dropdown
+        ayab_connection_dropdown: ayab_connection_dropdown
         canvas.before:
             # from http://stackoverflow.com/questions/20872598/kivy-change-background-color-to-white#20872657
             Color:
@@ -42,7 +46,6 @@ Root:
                 size: self.size
         orientation: "vertical"
         size_hint_y: None
-        id: knit_settings
         BoxLayout:
             size_hint_y: 1
             Label:
@@ -58,47 +61,18 @@ Root:
             DropDown:
                 # TODO: automatically fill them
                 id: ayab_connection_dropdown
-                Button:
-                    text: _("USB") + " - COM32"
-                    size_hint_y: None
-                    height: 44
-                    on_release: knit_settings.communication_selection = "USB - COM32"
-                Button:
-                    text: _("USB") + " - COM31"
-                    size_hint_y: None
-                    height: 44
-                    on_release: knit_settings.communication_selection = "USB - COM31"
-                Button:
-                    text: _("USB") + " - COM1"
-                    size_hint_y: None
-                    height: 44
-                    on_release: knit_settings.communication_selection = "USB - COM1"
         GridLayout:
             cols: 2
             Label:
                 text: _("Machine Type:")
             Button:
-                text: knit_settings.machine_type
+                id: machine_type_button
+                text: knit_settings.machine_name
                 size_hint_y: None
-                on_release: ayab_machines_dropdown.open(self)
+                on_release: knit_settings.populate_machines_drop_down()
             DropDown:
-                # TODO: automatically fill them
+                # NOTE: automatically filled
                 id: ayab_machines_dropdown
-                Button:
-                    text: _("KH910")
-                    size_hint_y: None
-                    height: 44
-                    on_release: knit_settings.machine_type = "KH910"
-                Button:
-                    text: _("KH930")
-                    size_hint_y: None
-                    height: 44
-                    on_release: knit_settings.machine_type = "KH930"
-                Button:
-                    text: _("CK35")
-                    size_hint_y: None
-                    height: 44
-                    on_release: knit_settings.machine_type = "CK35"
         BoxLayout:
             id: colors_layout
         GridLayout:
@@ -146,9 +120,8 @@ Root:
                     value: right_end_needle_slider.value
                     text: "30"
         BoxLayout:
-            Label:
-                text: _("Knitting")
-            Switch:
+            Button:
+                text: _("Start Knitting!")
             
 
 <LoadDialog>:
