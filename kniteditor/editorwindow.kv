@@ -33,10 +33,11 @@ Root:
             on_release: root.show_save_file_dialog()
     AYABKnitSettings:
         id: knit_settings
-        machine_type_button: machine_type_button
-        colors_layout: colors_layout
+        machine_button: machine_button
         ayab_machines_dropdown: ayab_machines_dropdown
-        ayab_connection_dropdown: ayab_connection_dropdown
+        connection_button: connection_button
+        ayab_connections_dropdown: ayab_connections_dropdown
+        colors_layout: colors_layout
         canvas.before:
             # from http://stackoverflow.com/questions/20872598/kivy-change-background-color-to-white#20872657
             Color:
@@ -53,26 +54,27 @@ Root:
         GridLayout:
             cols: 2
             Label:
-                text: _("Connection:")
-            Button:
-                text: knit_settings.communication_selection
-                size_hint_y: None
-                on_release: ayab_connection_dropdown.open(self)
-            DropDown:
-                # TODO: automatically fill them
-                id: ayab_connection_dropdown
-        GridLayout:
-            cols: 2
-            Label:
                 text: _("Machine Type:")
             Button:
-                id: machine_type_button
+                id: machine_button
                 text: knit_settings.machine_name
                 size_hint_y: None
                 on_release: knit_settings.populate_machines_drop_down()
             DropDown:
                 # NOTE: automatically filled
                 id: ayab_machines_dropdown
+        GridLayout:
+            cols: 2
+            Label:
+                text: _("Connections:")
+            Button:
+                id: connection_button
+                text: _(knit_settings.connection_name)
+                size_hint_y: None
+                on_release: knit_settings.populate_connections_drop_down()
+            DropDown:
+                # NOTE: automatically filled
+                id: ayab_connections_dropdown
         BoxLayout:
             id: colors_layout
         GridLayout:

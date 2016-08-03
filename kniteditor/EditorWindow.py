@@ -12,8 +12,8 @@ from .dialogs import LoadDialog, SaveDialog
 from .localization import _, list_translated_languages, \
     change_language_to_translated, current_translated_language
 import json
-import AYABKnitSettings
-import IntInput
+from .AYABKnitSettings import AYABKnitSettings
+from .IntInput import IntInput
 
 #: the language code key
 LANGUAGE_CODE = "current"
