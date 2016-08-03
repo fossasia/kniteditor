@@ -26,3 +26,24 @@ msgstr "Laden"
 
 msgid "Cancel"
 msgstr "Abbrechen"
+
+msgid "Choose a connection!"
+msgstr "Wähle eine Verbindung!"
+
+msgid "AYAB Knit Settings"
+msgstr "AYAB-Strickeinstellungen"
+
+msgid "Machine Type:"
+msgstr "Maschinentyp:"
+
+msgid "Connections:"
+msgstr "Verbindungen:"
+
+msgid "left end needle"
+msgstr "Linkeste Nadel"
+
+msgid "right end needle"
+msgstr "Rechtestes Nadel"
+
+msgid "Start Knitting!"
+msgstr "Stricken beginnen!"

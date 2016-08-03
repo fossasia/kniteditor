@@ -26,3 +26,24 @@ msgstr "Load"
 
 msgid "Cancel"
 msgstr "Cancel"
+
+msgid "Choose a connection!"
+msgstr "Choose a connection!"
+
+msgid "AYAB Knit Settings"
+msgstr "AYAB Knit Settings"
+
+msgid "Machine Type:"
+msgstr "Machine Type:"
+
+msgid "Connections:"
+msgstr "Connections:"
+
+msgid "left end needle"
+msgstr "left end needle"
+
+msgid "right end needle"
+msgstr "right end needle"
+
+msgid "Start Knitting!"
+msgstr "Start Knitting!"
