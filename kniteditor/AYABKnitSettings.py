@@ -20,7 +20,8 @@ class AYABKnitSettings(BoxLayout):
     def populate_drop_down(self, drop_down, entries, attribute, location):
         drop_down.clear_widgets()
         for entry in entries:
-            Logger.info("populate dropdown: {}".format(entry))
+            Logger.info("populate dropdown for {}: {}"
+                        "".format(attribute, entry))
             button = Button(
                 text=entry.name, height=44, size_hint_y=None, on_release=
                 lambda a, entry=entry: setattr(self, attribute, entry))
