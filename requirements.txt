@@ -4,7 +4,7 @@
 #
 #    pip-compile --output-file requirements.txt requirements.in
 #
-knittingpattern==0.1.14
+knittingpattern==0.1.15
 Pillow==3.2.0             # via knittingpattern
 webcolors==1.5            # via knittingpattern
 xmltodict==0.10.2         # via knittingpattern
