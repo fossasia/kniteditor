@@ -10,10 +10,37 @@ from AYABInterface.interaction import Interaction
 from AYABInterface.machines import KH910
 from kivy.logger import Logger
 from .localization import _
+from kivy.clock import Clock
 
+
+class NullCommunication(object):
+
+    def stop(self):
+        """Do nothing."""
+
+class NullFile(object):
+
+    def close(self):
+        """Do nothing."""
 
 first_machine = KH910()
 
+
+class DebugSerial(object):
+    
+    def __init__(self, serial):
+        self._serial = serial
+        self.close = serial.close
+        
+    def write(self, bytes_):
+        print("write:", bytes_)
+        self._serial.write(bytes_)
+
+    def read(self, *args):
+        bytes_ = self._serial.read(*args)
+        print("read:", bytes_)
+        return bytes_
+        
 class AYABKnitSettings(BoxLayout):
     
     """Class containing the settings to connect to the AYAB shield."""
@@ -98,9 +125,23 @@ class AYABKnitSettings(BoxLayout):
             return
         self.pattern_in_progress.show_pattern(pattern)
         self.start_knitting_button.text = _("Restart knitting!")
-        self.interaction = Interaction(pattern, self.machine)
-        self.populate_actions(self.interaction.actions)
         
+        self.stop()
+                
+        self.interaction = Interaction(pattern, self.machine)
+        self.comunication_connection = DebugSerial(self.connection.connect())
+        self.communication = self.interaction.communicate_through(
+            self.comunication_connection)
+        self.communication.on_message(print)
+        self.communication.parallelize(2)
+        
+        self.populate_actions(self.interaction.actions)
+    
+    def stop(self):
+        """Stop the connections."""
+        self.comunication_connection.close()
+        self.communication.stop()
+
     def populate_actions(self, actions):
         """Show the actions associted with the pattern."""
         self.list_of_actions.clear_widgets()
@@ -109,6 +150,8 @@ class AYABKnitSettings(BoxLayout):
             self.list_of_actions.add_widget(button)
 
     interaction = ObjectProperty(None)
+    communication = ObjectProperty(NullCommunication())
+    comunication_connection = ObjectProperty(NullFile())
     list_of_actions = ObjectProperty(None)
     pattern_in_progress = ObjectProperty(None)
     start_knitting_button = ObjectProperty(None)

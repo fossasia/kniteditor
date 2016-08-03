@@ -176,6 +176,13 @@ class EditorWindow(App):
         .. seealso:: :meth:`kivy.app.App.on_start`
         """
         self.show_example()
+        
+    def on_stop(self):
+        """The application terminates.
+        
+        .. seealso:: :meth:`kivy.app.App.on_stop`
+        """
+        self.root.knit_settings.stop()
     
     def show_example(self):
         """Show an example knitting pattern."""
