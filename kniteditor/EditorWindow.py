@@ -26,6 +26,8 @@ class Root(PageLayout):
 
     knitting_pattern = ObjectProperty(None)
     knit_settings = ObjectProperty(None)
+    ayab_machines_dropdown = ObjectProperty(None)
+    ayab_connections_dropdown = ObjectProperty(None)
 
     def show_open_file_dialog(self):
         """Open the file dialog for loading."""
@@ -164,6 +166,9 @@ class EditorWindow(App):
     def build(self):
         """Build the application."""
         self.update_language_from_config()
+        self.root.ayab_machines_dropdown.clear_widgets()
+        self.root.ayab_connections_dropdown.clear_widgets()
+
         
     def on_start(self):
         """The application is started.

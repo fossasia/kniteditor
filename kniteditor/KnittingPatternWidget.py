@@ -3,22 +3,33 @@
 This module is a kivy display for :class:`knitting patterns
 <knittingpattern.KnittingPatternSet.KnittingPatternSet>`.
 """
-from kivy.uix.floatlayout import FloatLayout
 from knittingpattern.convert.Layout import GridLayout
 from .InstructionSVGWidgetCache import default_cache
 from kivy.graphics import Rectangle, Color
 from kivy.graphics.instructions import InstructionGroup
 from kivy.factory import Factory
+from knittingpattern import new_knitting_pattern
+
+from kivy.uix.anchorlayout import AnchorLayout
+from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.floatlayout import FloatLayout
+from kivy.uix.gridlayout import GridLayout as KivyGridLayout
+from kivy.uix.relativelayout import RelativeLayout
+from kivy.uix.scatterlayout import ScatterLayout
+from kivy.uix.label import Label
 
 
-class KnittingPatternWidget(FloatLayout):
+
+
+class KnittingPatternWidget(RelativeLayout):
 
     """The widget to display a knittitng pattern."""
 
     def __init__(self, **kw):
         super().__init__(**kw)
-        self._pattern = None
+        self._pattern = new_knitting_pattern("")
         self._mark = None
+        self.zoom = 1
 
     def show_pattern(self, pattern):
         """Show a knitting pattern.
@@ -39,13 +50,16 @@ class KnittingPatternWidget(FloatLayout):
         if not self._pattern:
             return
         self.clear_widgets()
+        add_width = 1
+        add_height = 1
         bbox = self._bbox
-        bbox_width = bbox[2] - bbox[0]
-        bbox_height = bbox[3] - bbox[1]
+        bbox_width = bbox[2] - bbox[0] + add_width
+        bbox_height = bbox[3] - bbox[1] + add_height
         print(bbox, self.height, self.width)
-        zoom = 20  # min(self.height / bbox_height, self.width / bbox_width)
-        min_y = bbox[1] - 0.618
-        flip_x = bbox[0] + bbox[2] + 1.618
+        zoom = min(self.height / bbox_height, self.width / bbox_width)
+        self.zoom = zoom
+        min_y = bbox[1] - add_width/2  # - 0.618
+        flip_x = bbox[0] + bbox[2] + add_height / 2  # + 1.618
         create_svg_widget = self._cache.create_svg_widget
         for instruction in self._instructions:
             svg = create_svg_widget(instruction.instruction,
@@ -64,6 +78,7 @@ class KnittingPatternWidget(FloatLayout):
         row = self._layout.row_in_grid(row)
         if self._mark:
             self.canvas.remove(self._mark)
+        border_width *= self.zoom
         width = row.width * self._zoom + border_width + border_width
         height = row.height * self._zoom + border_width + border_width
         x = (self._flip_x - row.x - row.width) * self._zoom - border_width
@@ -78,6 +93,11 @@ class KnittingPatternWidget(FloatLayout):
                                  size=(border_width, height)))
         self.canvas.add(self._mark)
 
+    @property
+    def pattern(self):
+        """The knitting pattern."""
+        return self._pattern
+    pattern.setter(show_pattern)
 
 Factory.register('KnittingPatternWidget', cls=KnittingPatternWidget)
 

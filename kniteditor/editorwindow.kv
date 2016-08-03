@@ -5,20 +5,13 @@ Root:
     page: 2
     knitting_pattern: knitting_pattern
     knit_settings: knit_settings
-    KnittingPatternWidget:
-        canvas.before:
-            # from http://stackoverflow.com/questions/20872598/kivy-change-background-color-to-white#20872657
-            Color:
-                rgba: 0, 0, 0, 1
-            Rectangle:
-                pos: self.pos
-                size: self.size
-        id: knitting_pattern
+    ayab_machines_dropdown: ayab_machines_dropdown
+    ayab_connections_dropdown: ayab_connections_dropdown
     BoxLayout:
         canvas.before:
             # from http://stackoverflow.com/questions/20872598/kivy-change-background-color-to-white#20872657
             Color:
-                rgba: 0, 0, 0, 1
+                rgba: 1, 1, 1, 1
             Rectangle:
                 pos: self.pos
                 size: self.size
@@ -31,13 +24,25 @@ Root:
         Button:
             text: _("Save")
             on_release: root.show_save_file_dialog()
+    KnittingPatternWidget:
+        canvas.before:
+            # from http://stackoverflow.com/questions/20872598/kivy-change-background-color-to-white#20872657
+            Color:
+                rgba: 0, 0, 0, 1
+            Rectangle:
+                pos: (0, 0)
+                size: self.size
+        id: knitting_pattern
     AYABKnitSettings:
         id: knit_settings
         machine_button: machine_button
         ayab_machines_dropdown: ayab_machines_dropdown
-        connection_button: connection_button
         ayab_connections_dropdown: ayab_connections_dropdown
+        connection_button: connection_button
         colors_layout: colors_layout
+        start_knitting_button: start_knitting_button
+        pattern_in_progress: pattern_in_progress
+        list_of_actions: list_of_actions
         canvas.before:
             # from http://stackoverflow.com/questions/20872598/kivy-change-background-color-to-white#20872657
             Color:
@@ -72,9 +77,8 @@ Root:
                 text: _(knit_settings.connection_name)
                 size_hint_y: None
                 on_release: knit_settings.populate_connections_drop_down()
-            DropDown:
-                # NOTE: automatically filled
-                id: ayab_connections_dropdown
+            DropDown:   
+                id: ayab_connections_dropdown  
         BoxLayout:
             id: colors_layout
         GridLayout:
@@ -123,9 +127,33 @@ Root:
                     text: "30"
         BoxLayout:
             Button:
+                id: start_knitting_button
                 text: _("Start Knitting!")
-            
-
+                on_press: knit_settings.start_knitting(knitting_pattern.pattern)
+    KnittingPatternWidget:
+        canvas.before:
+            # from http://stackoverflow.com/questions/20872598/kivy-change-background-color-to-white#20872657
+            Color:
+                rgba: 1, 1, 1, 1
+            Rectangle:
+                pos: (0, 0)
+                size: self.size
+        id: pattern_in_progress
+    ScrollView:
+        canvas.before:
+            # from http://stackoverflow.com/questions/20872598/kivy-change-background-color-to-white#20872657
+            Color:
+                rgba: 0, 0, 0, 1
+            Rectangle:
+                pos: (0, 0)
+                size: self.size
+        size_hint: (1, 1)
+        GridLayout:
+            id: list_of_actions
+            cols: 1
+            spacing: 3
+            size_hint_y: 1
+    
 <LoadDialog>:
     BoxLayout:
         size: root.size
