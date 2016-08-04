@@ -41,5 +41,7 @@ kniteditor
    :target: https://waffle.io/AllYarnsAreBeautiful/ayab-desktop
    :alt: Issues ready to work on
 
+To install the software, see `the releases
+<https://github.com/AllYarnsAreBeautiful/kniteditor/releases>`__.
 For installation instructions and more, `see the documentation
 <http://kniteditor.readthedocs.io/>`__.
