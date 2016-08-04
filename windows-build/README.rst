@@ -11,6 +11,6 @@ on how this build came to be.
 We use `pyinstaller <https://pyinstaller.readthedocs.io/>`__ to create the
 binaries.
 `Inno Setup 5 <http://www.jrsoftware.org/isinfo.php>`__ is used to build the
-installer. Note that Inno Setup 5 has its worn license attached.
+installer. Note that Inno Setup 5 has its own license attached.
 
 Appveyor executes the windows build when a new release is drafted.
