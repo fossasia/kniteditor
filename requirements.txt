@@ -8,6 +8,6 @@ knittingpattern==0.1.15
 Pillow==3.2.0             # via knittingpattern
 webcolors==1.5            # via knittingpattern
 xmltodict==0.10.2         # via knittingpattern
-AYABInterface==0.0.2
+AYABInterface==0.0.3
 crc8==0.0.3               # via AYABInterface
 pyserial==3.1.1           # via AYABInterface
