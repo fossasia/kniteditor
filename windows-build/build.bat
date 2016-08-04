@@ -9,6 +9,6 @@ if "%PYTHON%" == "" (
     exit 1
 )
 
-"%PYTHON%\python.exe" -m pip install pyinstaller
+"%PYTHON%\python.exe" -m pip install pyinstaller pygame
 "%PYTHON%\python.exe" -m PyInstaller KnitEditor.spec
 "Inno Setup 5\ISCC.exe" KnitEditor.iss
