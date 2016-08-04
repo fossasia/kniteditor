@@ -9,14 +9,7 @@ from kivy.graphics import Rectangle, Color
 from kivy.graphics.instructions import InstructionGroup
 from kivy.factory import Factory
 from knittingpattern import new_knitting_pattern
-
-from kivy.uix.anchorlayout import AnchorLayout
-from kivy.uix.boxlayout import BoxLayout
-from kivy.uix.floatlayout import FloatLayout
-from kivy.uix.gridlayout import GridLayout as KivyGridLayout
 from kivy.uix.relativelayout import RelativeLayout
-from kivy.uix.scatterlayout import ScatterLayout
-from kivy.uix.label import Label
 
 
 class KnittingPatternWidget(RelativeLayout):

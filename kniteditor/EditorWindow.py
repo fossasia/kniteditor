@@ -3,21 +3,16 @@ import knittingpattern
 import os
 import sys
 from kivy.app import App
-from .KnittingPatternWidget import KnittingPatternWidget
 from kivy.uix.pagelayout import PageLayout
-from kivy.uix.button import Button
 from kivy.uix.popup import Popup
 from kivy.properties import ObjectProperty
 from .dialogs import LoadDialog, SaveDialog
 from .localization import _, list_translated_languages, \
     change_language_to_translated, current_translated_language
 import json
-from .AYABKnitSettings import AYABKnitSettings
-from .IntInput import IntInput
 
-#: the language code key
-LANGUAGE_CODE = "current"
-LANGUAGE_SECTION = "language"
+LANGUAGE_CODE = "current"  #: the language code name
+LANGUAGE_SECTION = "language"  #: the language section name
 
 
 class Root(PageLayout):
@@ -194,4 +189,4 @@ def main(argv=sys.argv):
         sys.exit(errcode)
     EditorWindow().run()
 
-__all__ = ["main", "EditorWindow", "Root"]
+__all__ = ["main", "EditorWindow", "Root", "LANGUAGE_CODE", "LANGUAGE_SECTION"]

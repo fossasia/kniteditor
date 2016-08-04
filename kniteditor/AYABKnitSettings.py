@@ -4,17 +4,17 @@ from kivy.uix.boxlayout import BoxLayout
 from kivy.properties import StringProperty, ObjectProperty
 from kivy.uix.button import Button
 from kivy.uix.popup import Popup
-from kivy.uix.label import Label
 from AYABInterface import get_machines, get_connections
 from AYABInterface.interaction import Interaction
 from AYABInterface.machines import KH910
 from kivy.logger import Logger
 from .localization import _
-from kivy.clock import Clock
 from kivy.uix.dropdown import DropDown
 
 
 class NullCommunication(object):
+
+    """A null object pattern for communication."""
 
     def stop(self):
         """Do nothing."""
@@ -22,25 +22,43 @@ class NullCommunication(object):
 
 class NullFile(object):
 
+    """A null object pattern for files."""
+
     def close(self):
         """Do nothing."""
 
-first_machine = KH910()
+FIRST_MACHINE = KH910()  #: the machine that is displayed as default
 
 
 class DebugSerial(object):
 
+    """A :class:`serial.Serial` interface proxy that logs the communication."""
+
     def __init__(self, serial):
+        """Create a new DebugSerial object.
+
+        :param serial.Serial serial: the serial interface
+        """
         self._serial = serial
         self.close = serial.close
 
     def write(self, bytes_):
-        print("write:", bytes_)
+        """Write bytes to the serial and log them.
+
+        :param bytes bytes_: the bytes to write
+        """
+        Logger.debug("write:", bytes_)
         self._serial.write(bytes_)
 
     def read(self, *args):
+        """Read bytes from the serial and log them.
+
+        :param tuple args: the arguments to pass on to the read method
+        :return: the :class:`bytes` read from the serial
+        :rtype: bytes
+        """
         bytes_ = self._serial.read(*args)
-        print("read:", bytes_)
+        Logger.debug("read:", bytes_)
         return bytes_
 
 
@@ -48,6 +66,7 @@ class AYABKnitSettings(BoxLayout):
 
     """Class containing the settings to connect to the AYAB shield."""
 
+    #: the different colors chosen
     colors_layout = ObjectProperty(None)
 
     # common
@@ -59,7 +78,9 @@ class AYABKnitSettings(BoxLayout):
             Logger.info("populate dropdown for {}: {}"
                         "".format(attribute, entry))
             button = Button(
-                text=entry.name, height=44, size_hint_y=None, on_release=lambda a, entry=entry: setattr(self, attribute, entry))
+                text=entry.name, height=44, size_hint_y=None,
+                on_release=lambda a, entry=entry:
+                    setattr(self, attribute, entry))
             drop_down.add_widget(button)
         drop_down.open(location)
 
@@ -76,12 +97,16 @@ class AYABKnitSettings(BoxLayout):
         self.popup = popup
         popup.open()
 
+    #: the :class:`~kivy.uix.popup.Popup` to display messages to the user
     popup = ObjectProperty(None)
 
     # the machines
 
-    machine = ObjectProperty(first_machine)
-    machine_name = StringProperty(first_machine.name)
+    #: the machine to use for knitting
+    machine = ObjectProperty(FIRST_MACHINE)
+    #: the name of the :attr:`machine`
+    machine_name = StringProperty(FIRST_MACHINE.name)
+    #: the button to choose the machines.
     machine_button = ObjectProperty(None)
 
     def populate_machines_drop_down(self):
@@ -95,8 +120,11 @@ class AYABKnitSettings(BoxLayout):
 
     # the connections
 
+    #: the connection to communicate through
     connection = ObjectProperty(None)
+    #: the name of the connection
     connection_name = StringProperty(_("Choose a connection!"))
+    #: the button to choose the connection with
     connection_button = ObjectProperty(None)
 
     def populate_connections_drop_down(self):
@@ -149,12 +177,22 @@ class AYABKnitSettings(BoxLayout):
             button = Button(text=str(action))
             self.list_of_actions.add_widget(button)
 
+    #: the :class:`~AYABInterface.interaction.Interaction` object to
+    #: interact with while knitting
     interaction = ObjectProperty(None)
+    #: the :class:`~AYABInterface.communication.Communication` object to
+    #: communicate with
     communication = ObjectProperty(NullCommunication())
+    #: the :class:`DebugSerial` or :class:`serial.Serial` to use for
+    #: communication
     comunication_connection = ObjectProperty(NullFile())
+    #: the list of actions to diaplay to the user
     list_of_actions = ObjectProperty(None)
+    #: the :class:`~kniteditor.KnittingPatternWidget.KnittingPatternWidget` to
+    #: display the pattern to knit and the progess
     pattern_in_progress = ObjectProperty(None)
+    #: the :class:`~kivy.uix.button.Button` to start and restart knitting with
     start_knitting_button = ObjectProperty(None)
 
 Factory.register('AYABKnitSettings', cls=AYABKnitSettings)
-__all__ = ["AYABKnitSettings"]
+__all__ = ["AYABKnitSettings", "DebugSerial", "NullCommunication", "NullFile"]

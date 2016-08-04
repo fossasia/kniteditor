@@ -1,7 +1,6 @@
 """This module allows fast access to instruction SVGs."""
 from knittingpattern.convert.InstructionSVGCache import default_svg_cache
 from kivy.uix.scatter import Scatter
-from kivy.graphics.svg import Svg
 
 
 class SVGWidget(Scatter):
