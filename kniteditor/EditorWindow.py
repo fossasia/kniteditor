@@ -26,8 +26,6 @@ class Root(PageLayout):
 
     knitting_pattern = ObjectProperty(None)
     knit_settings = ObjectProperty(None)
-    ayab_machines_dropdown = ObjectProperty(None)
-    ayab_connections_dropdown = ObjectProperty(None)
 
     def show_open_file_dialog(self):
         """Open the file dialog for loading."""
@@ -166,24 +164,21 @@ class EditorWindow(App):
     def build(self):
         """Build the application."""
         self.update_language_from_config()
-        self.root.ayab_machines_dropdown.clear_widgets()
-        self.root.ayab_connections_dropdown.clear_widgets()
 
-        
     def on_start(self):
         """The application is started.
-        
+
         .. seealso:: :meth:`kivy.app.App.on_start`
         """
         self.show_example()
-        
+
     def on_stop(self):
         """The application terminates.
-        
+
         .. seealso:: :meth:`kivy.app.App.on_stop`
         """
         self.root.knit_settings.stop()
-    
+
     def show_example(self):
         """Show an example knitting pattern."""
         patterns = knittingpattern.load_from().example("block4x4.json")

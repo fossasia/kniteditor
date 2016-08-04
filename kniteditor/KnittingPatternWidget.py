@@ -19,8 +19,6 @@ from kivy.uix.scatterlayout import ScatterLayout
 from kivy.uix.label import Label
 
 
-
-
 class KnittingPatternWidget(RelativeLayout):
 
     """The widget to display a knittitng pattern."""
@@ -58,7 +56,7 @@ class KnittingPatternWidget(RelativeLayout):
         print(bbox, self.height, self.width)
         zoom = min(self.height / bbox_height, self.width / bbox_width)
         self.zoom = zoom
-        min_y = bbox[1] - add_width/2  # - 0.618
+        min_y = bbox[1] - add_width / 2  # - 0.618
         flip_x = bbox[0] + bbox[2] + add_height / 2  # + 1.618
         create_svg_widget = self._cache.create_svg_widget
         for instruction in self._instructions:

@@ -5,8 +5,6 @@ Root:
     page: 2
     knitting_pattern: knitting_pattern
     knit_settings: knit_settings
-    ayab_machines_dropdown: ayab_machines_dropdown
-    ayab_connections_dropdown: ayab_connections_dropdown
     BoxLayout:
         canvas.before:
             # from http://stackoverflow.com/questions/20872598/kivy-change-background-color-to-white#20872657
@@ -36,8 +34,6 @@ Root:
     AYABKnitSettings:
         id: knit_settings
         machine_button: machine_button
-        ayab_machines_dropdown: ayab_machines_dropdown
-        ayab_connections_dropdown: ayab_connections_dropdown
         connection_button: connection_button
         colors_layout: colors_layout
         start_knitting_button: start_knitting_button
@@ -65,9 +61,6 @@ Root:
                 text: knit_settings.machine_name
                 size_hint_y: None
                 on_release: knit_settings.populate_machines_drop_down()
-            DropDown:
-                # NOTE: automatically filled
-                id: ayab_machines_dropdown
         GridLayout:
             cols: 2
             Label:
@@ -77,8 +70,6 @@ Root:
                 text: _(knit_settings.connection_name)
                 size_hint_y: None
                 on_release: knit_settings.populate_connections_drop_down()
-            DropDown:   
-                id: ayab_connections_dropdown  
         BoxLayout:
             id: colors_layout
         GridLayout:
