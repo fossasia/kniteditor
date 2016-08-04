@@ -185,7 +185,8 @@ def main(argv=sys.argv):
     """Open the editor window."""
     if "/test" in argv:
         import pytest
-        errcode = pytest.main(["--pyargs", "knittingpattern", "kniteditor"])
+        errcode = pytest.main(["--pyargs", "knittingpattern", "kniteditor",
+                               "AYABInterface"])
         sys.exit(errcode)
     EditorWindow().run()
 
