@@ -9,20 +9,20 @@ Download
 --------
 
 You can download the `latest installers
-<https://github.com/AllYarnsAreBeautiful/kniteditor/releases/latest>`__
+<https://github.com/fossasia/kniteditor/releases/latest>`__
 from the `github releases
-<https://github.com/AllYarnsAreBeautiful/kniteditor/releases>`__.
+<https://github.com/fossasia/kniteditor/releases>`__.
 This includes these binaries:
 
-- Mac OSX App `"KnitEditor.dmg" <https://github.com/AllYarnsAreBeautiful/kniteditor/releases/latest>`__
-- Windows Installer `"KnitEditorInstaller.exe" <https://github.com/AllYarnsAreBeautiful/kniteditor/releases/latest>`__
-- Windows standalone `"standalone.zip" <https://github.com/AllYarnsAreBeautiful/kniteditor/releases/latest>`__
+- Mac OSX App `"KnitEditor.dmg" <https://github.com/fossasia/kniteditor/releases/latest>`__
+- Windows Installer `"KnitEditorInstaller.exe" <https://github.com/fossasia/kniteditor/releases/latest>`__
+- Windows standalone `"standalone.zip" <https://github.com/fossasia/kniteditor/releases/latest>`__
 
 All download locations are listed here:
 
 - `AppVeyor <https://ci.appveyor.com/project/AllYarnsAreBeautiful/kniteditor/build/artifacts>`__
 - `The Python Package Index <https://pypi.python.org/pypi/kniteditor>`__
-- `Github Releases <https://github.com/AllYarnsAreBeautiful/kniteditor/releases>`__
+- `Github Releases <https://github.com/fossasia/kniteditor/releases>`__
 
 Kivy Installation
 -----------------
@@ -101,7 +101,7 @@ If you wish to get latest source version running, you can check out the reposito
 
 .. code:: bash
 
-  git clone https://github.com/AllYarnsAreBeautiful/kniteditor.git
+  git clone https://github.com/fossasia/kniteditor.git
   cd kniteditor
   sudo python3 -m pip install --upgrade pip
   sudo python3 -m pip install -r requirements.txt

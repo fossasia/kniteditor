@@ -30,7 +30,7 @@ Further reading:
 - `domains <http://www.sphinx-doc.org/en/stable/domains.html>`__
 
 With Notepad++ under Windows, you can run the `make_html.bat
-<https://github.com/AllYarnsAreBeautiful/kniteditor/blob/master/docs/make_html.bat>`__ file in the
+<https://github.com/fossasia/kniteditor/blob/master/docs/make_html.bat>`__ file in the
 ``docs`` directory to create the documentation and show undocumented code.
 
 Code Climate
@@ -88,11 +88,11 @@ Motivation
 ~~~~~~~~~~
 
 Deployment is automized by `Travis
-<https://travis-ci.org/AllYarnsAreBeautiful/kniteditor>`__ and `AppVeyor
+<https://travis-ci.org/fossasia/kniteditor>`__ and `AppVeyor
 <https://ci.appveyor.com/project/AllYarnsAreBeautiful/kniteditor>`__.
 In order to ease the deployment for you, the developer, only a new tag needs to
 be created and a new release is uploaded to `Github
-<https://github.com/AllYarnsAreBeautiful/kniteditor/releases>`__ and `PyPi
+<https://github.com/fossasia/kniteditor/releases>`__ and `PyPi
 <https://pypi.python.org/pypi/kniteditor>`__.
 Travis and AppVeyor build the corresponding executables and upload them
 automatically. No special setup is required to create the executables yourself.
@@ -117,7 +117,7 @@ To upload new versions, tag them with git and push them.
   setup.py tag_and_deploy
 
 The tag shows up as a `travis build
-<https://travis-ci.org/AllYarnsAreBeautiful/kniteditor/builds>`__.
+<https://travis-ci.org/fossasia/kniteditor/builds>`__.
 If the build succeeds, it is automatically deployed to `Pypi
 <https://pypi.python.org/pypi/kniteditor>`__.
 
@@ -156,7 +156,7 @@ Throughout this chapter, ``<new_version>`` refers to a a string of the form ``[0
 
 4. Create a pull-request.
 
-5. Wait for `travis-ci <https://travis-ci.org/AllYarnsAreBeautiful/kniteditor>`__ to pass the tests.
+5. Wait for `travis-ci <https://travis-ci.org/fossasia/kniteditor>`__ to pass the tests.
 
 6. Merge the pull-request.
 7. Checkout the master branch and pull the changes from the commit_.

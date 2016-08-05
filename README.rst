@@ -1,24 +1,24 @@
 kniteditor
 ==========
 
-.. image:: https://travis-ci.org/AllYarnsAreBeautiful/kniteditor.svg
-   :target: https://travis-ci.org/AllYarnsAreBeautiful/kniteditor
+.. image:: https://travis-ci.org/fossasia/kniteditor.svg
+   :target: https://travis-ci.org/fossasia/kniteditor
    :alt: Build Status
 
 .. image:: https://ci.appveyor.com/api/projects/status/yildjtxp8an3vejx?svg=true
    :target: https://ci.appveyor.com/project/AllYarnsAreBeautiful/kniteditor
    :alt: AppVeyor CI build status (Windows)
 
-.. image:: https://codeclimate.com/github/AllYarnsAreBeautiful/kniteditor/badges/gpa.svg
-   :target: https://codeclimate.com/github/AllYarnsAreBeautiful/kniteditor
+.. image:: https://codeclimate.com/github/fossasia/kniteditor/badges/gpa.svg
+   :target: https://codeclimate.com/github/fossasia/kniteditor
    :alt: Code Climate
 
-.. image:: https://codeclimate.com/github/AllYarnsAreBeautiful/kniteditor/badges/coverage.svg
-   :target: https://codeclimate.com/github/AllYarnsAreBeautiful/kniteditor/coverage
+.. image:: https://codeclimate.com/github/fossasia/kniteditor/badges/coverage.svg
+   :target: https://codeclimate.com/github/fossasia/kniteditor/coverage
    :alt: Test Coverage
 
-.. image:: https://codeclimate.com/github/AllYarnsAreBeautiful/kniteditor/badges/issue_count.svg
-   :target: https://codeclimate.com/github/AllYarnsAreBeautiful/kniteditor
+.. image:: https://codeclimate.com/github/fossasia/kniteditor/badges/issue_count.svg
+   :target: https://codeclimate.com/github/fossasia/kniteditor
    :alt: Issue Count
 
 .. image:: https://badge.fury.io/py/kniteditor.svg
@@ -37,11 +37,11 @@ kniteditor
    :target: https://landscape.io/github/AllYarnsAreBeautiful/kniteditor/master
    :alt: Code Health
 
-.. image:: https://badge.waffle.io/AllYarnsAreBeautiful/ayab-desktop.svg?label=ready&title=issues%20ready
-   :target: https://waffle.io/AllYarnsAreBeautiful/ayab-desktop
+.. image:: https://badge.waffle.io/fossasia/kniteditor.svg?label=ready&title=issues%20ready
+   :target: https://waffle.io/fossasia/kniteditor
    :alt: Issues ready to work on
 
 To install the software, see `the releases
-<https://github.com/AllYarnsAreBeautiful/kniteditor/releases>`__.
+<https://github.com/fossasia/kniteditor/releases>`__.
 For installation instructions and more, `see the documentation
 <http://kniteditor.readthedocs.io/>`__.

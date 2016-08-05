@@ -43,9 +43,9 @@ METADATA = dict(
     packages=PACKAGE_NAMES,
     author=__author__,
     author_email='niccokunzmann@rambler.ru',
-    description='Python library for knitting machines.',
+    description='An editor for knitwork.',
     license='LGPL',
-    url='https://github.com/AllYarnsAreBeautiful/' + PACKAGE_NAME,
+    url='https://github.com/fossasia/' + PACKAGE_NAME,
     keywords='knitting ayab fashion',
 )
 
