@@ -14,7 +14,7 @@ from kivy.uix.relativelayout import RelativeLayout
 
 class KnittingPatternWidget(RelativeLayout):
 
-    """The widget to display a knittitng pattern."""
+    """The widget to display a knitting pattern."""
 
     def __init__(self, **kw):
         super().__init__(**kw)
