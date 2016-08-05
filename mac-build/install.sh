@@ -8,6 +8,9 @@ HERE="`dirname \"$0\"`"
 USER="$1"
 cd "$HERE"
 
+echo "# brew --cache"
+brew --cache
+echo "# brew update"
 brew update
 
 echo "# install python3"
