@@ -33,8 +33,8 @@ kniteditor
    :target: https://kniteditor.readthedocs.org
    :alt: Read the Documentation
 
-.. image:: https://landscape.io/github/AllYarnsAreBeautiful/kniteditor/master/landscape.svg?style=flat
-   :target: https://landscape.io/github/AllYarnsAreBeautiful/kniteditor/master
+.. image:: https://landscape.io/github/fossasia/kniteditor/master/landscape.svg?style=flat
+   :target: https://landscape.io/github/fossasia/kniteditor/master
    :alt: Code Health
 
 .. image:: https://badge.waffle.io/fossasia/kniteditor.svg?label=ready&title=issues%20ready
