@@ -119,7 +119,7 @@ class EditorWindow(App):
             {"type": "optionmapping",
              "title": _("Language"),
              "desc": _("Choose your language"),
-             "section": "language",
+             "section": LANGUAGE_SECTION,
              "key": LANGUAGE_CODE,
              "options": {code: language_code_to_translation(code)
                          for code in list_languages()}}
