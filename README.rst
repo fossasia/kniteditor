@@ -23,7 +23,7 @@ kniteditor
 
 .. image:: https://badge.fury.io/py/kniteditor.svg
    :target: https://pypi.python.org/pypi/kniteditor
-   :alt: Issue Count
+   :alt: Python Package Index
    
 .. image:: https://img.shields.io/pypi/dm/kniteditor.svg
    :target: https://pypi.python.org/pypi/kniteditor#downloads

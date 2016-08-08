@@ -7,9 +7,10 @@ from kivy.uix.pagelayout import PageLayout
 from kivy.uix.popup import Popup
 from kivy.properties import ObjectProperty
 from .dialogs import LoadDialog, SaveDialog
-from .localization import _, list_translated_languages, \
-    change_language_to_translated, current_translated_language
+from .localization import _, list_languages, change_language_to, \
+    current_language, language_code_to_translation
 import json
+from .settings import Settings
 
 LANGUAGE_CODE = "current"  #: the language code name
 LANGUAGE_SECTION = "language"  #: the language section name
@@ -83,7 +84,7 @@ class EditorWindow(App):
          <https://kivy.org/docs/api-kivy.app.html#application-configuration>`__
         """
         config.setdefaults(LANGUAGE_SECTION, {
-            LANGUAGE_CODE: current_translated_language()
+            LANGUAGE_CODE: current_language()
         })
 
     def build_settings(self, settings):
@@ -103,7 +104,7 @@ class EditorWindow(App):
         """Set the current language of the application from the configuration.
         """
         config_language = self.config.get(LANGUAGE_SECTION, LANGUAGE_CODE)
-        change_language_to_translated(config_language)
+        change_language_to(config_language)
 
     @property
     def settings_specification(self):
@@ -115,15 +116,13 @@ class EditorWindow(App):
 
         """
         settings = [
-            {"type": "title",
-             "title": _("KnitEditor")},
-
-            {"type": "options",
+            {"type": "optionmapping",
              "title": _("Language"),
              "desc": _("Choose your language"),
              "section": "language",
              "key": LANGUAGE_CODE,
-             "options": list_translated_languages()},
+             "options": {code: language_code_to_translation(code)
+                         for code in list_languages()}}
         ]
         return json.dumps(settings)
 
@@ -152,12 +151,13 @@ class EditorWindow(App):
     def config_change_in_section_language_key_current(self, new_language):
         """Set the new language of the application.
 
-        Same as :func:`kniteditor.localization.change_language_to_translated`
+        Same as :func:`kniteditor.localization.change_language_to`
         """
-        change_language_to_translated(new_language)
+        change_language_to(new_language)
 
     def build(self):
         """Build the application."""
+        self.settings_cls = Settings
         self.update_language_from_config()
 
     def on_start(self):
