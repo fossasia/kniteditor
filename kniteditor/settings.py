@@ -57,7 +57,7 @@ class SettingOptionMapping(SettingItem):
         # add all the options
         content.add_widget(Widget(size_hint_y=None, height=1))
         uid = str(self.uid)
-        for option, text in self.options.items():
+        for option, text in sorted(self.options.items(), key=lambda t: t[1]):
             state = 'down' if option == self.value else 'normal'
             btn = ToggleButton(text=text, state=state, group=uid)
             btn.bind(on_release=
@@ -87,6 +87,5 @@ class Settings(SettingsWithTabbedPanel):
         """
         super().__init__(*args, **kwargs)
         self.register_type("optionmapping", SettingOptionMapping)
-        
-        
+
 __all__ = ["SettingOptionMapping", "Settings"]

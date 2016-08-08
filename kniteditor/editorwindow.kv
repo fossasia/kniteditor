@@ -193,3 +193,9 @@ Root:
             Button:
                 text: _("Save")
                 on_release: root.save(filechooser.path, text_input.text)
+
+<SettingOptionMapping>:
+    Label:
+        text: (root.options[root.value] if root.value is not None else '')
+        pos: root.pos
+        font_size: '15sp'
