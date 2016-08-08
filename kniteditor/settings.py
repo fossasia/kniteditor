@@ -60,8 +60,8 @@ class SettingOptionMapping(SettingItem):
         for option, text in sorted(self.options.items(), key=lambda t: t[1]):
             state = 'down' if option == self.value else 'normal'
             btn = ToggleButton(text=text, state=state, group=uid)
-            btn.bind(on_release=
-                     lambda instance, option=option: self._set_option(option))
+            btn.bind(on_release=lambda instance,
+                     option=option: self._set_option(option))
             content.add_widget(btn)
 
         # finally, add a cancel button to return on the previous panel
@@ -76,12 +76,12 @@ class SettingOptionMapping(SettingItem):
 
 class Settings(SettingsWithTabbedPanel):
     """The settings for the editor.
-    
+
     .. seealso:: mod:`kivy.uix.settings`"""
 
     def __init__(self, *args, **kwargs):
         """Create a new settings instance.
-        
+
         The :class:`SettingOptionMapping` is added an can be used with the
         ``"optionmapping"`` type.
         """
