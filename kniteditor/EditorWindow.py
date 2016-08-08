@@ -121,7 +121,7 @@ class EditorWindow(App):
             {"type": "options",
              "title": _("Language"),
              "desc": _("Choose your language"),
-             "section": "language",
+             "section": LANGUAGE_SECTION,
              "key": LANGUAGE_CODE,
              "options": list_translated_languages()},
         ]
