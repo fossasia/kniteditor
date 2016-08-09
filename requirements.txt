@@ -4,10 +4,11 @@
 #
 #    pip-compile --output-file requirements.txt requirements.in
 #
+AYABInterface==0.0.3
+crc8==0.0.3               # via ayabinterface
 knittingpattern==0.1.15
+ObservableList==0.0.2     # via knittingpattern
 Pillow==3.2.0             # via knittingpattern
+pyserial==3.1.1           # via ayabinterface
 webcolors==1.5            # via knittingpattern
 xmltodict==0.10.2         # via knittingpattern
-AYABInterface==0.0.3
-crc8==0.0.3               # via AYABInterface
-pyserial==3.1.1           # via AYABInterface

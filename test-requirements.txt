@@ -4,7 +4,6 @@
 #
 #    pip-compile --output-file test-requirements.txt test-requirements.in
 #
-
 alabaster==0.7.8          # via sphinx
 apipkg==1.4               # via execnet
 astroid==1.4.6            # via pylint
