@@ -37,6 +37,7 @@ class SettingOptionMapping(SettingItem):
     '''
 
     def on_panel(self, instance, value):
+        """The panel is set. Bind to open a popup when it is clicked."""
         if value is None:
             return
         self.fbind('on_release', self._create_popup)

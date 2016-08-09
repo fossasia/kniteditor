@@ -15,3 +15,4 @@ Reference
    kniteditor/KnittingPatternWidget
    kniteditor/localization/index
    kniteditor/localization/observable_translation
+   kniteditor/settings
