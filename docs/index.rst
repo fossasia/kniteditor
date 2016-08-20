@@ -12,6 +12,7 @@ Contents:
    :maxdepth: 2
 
    Installation
+   Translate
    FileFormatSpecification
    DevelopmentSetup
    reference/index
