@@ -6,7 +6,7 @@
 #
 AYABInterface==0.0.8
 crc8==0.0.3               # via ayabinterface
-knittingpattern==0.1.18
+knittingpattern==0.1.19
 ObservableList==0.0.2     # via knittingpattern
 Pillow==3.2.0             # via knittingpattern
 pyserial==3.1.1           # via ayabinterface
