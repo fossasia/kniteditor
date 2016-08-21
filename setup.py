@@ -146,6 +146,34 @@ class LinkIntoSitePackagesCommand(Command):
         command = ["mklink", "/J", path, self.library_path]
         subprocess.check_call(command, shell=True)
 
+
+class DeletePycFilesCommand(Command):
+
+    description = "delete the .pyc files from dependencies"
+    user_options = []
+    name = "delete_pyc"
+    packages_to_clean = ["kniteditor", "knittingpattern", "AYABInterface"]
+
+    def initialize_options(self):
+        pass
+
+    def finalize_options(self):
+        pass
+
+    def run(self):
+        for package in self.packages_to_clean:
+            try:
+                __init__ = __import__(package).__file__
+            except ImportError:
+                print("Warning: skipping {}".format(package))
+                continue
+            package_root = os.path.dirname(__init__)
+            for root, dirs, files in os.walk(package_root):
+                for file in files:
+                    file_path = os.path.join(root, file)
+                    if file.endswith(".pyc"):
+                        os.remove(file_path)
+
 # Extra package metadata to be used only if setuptools is installed
 
 required_packages = read_requirements_file("requirements.txt")
@@ -274,7 +302,8 @@ SETUPTOOLS_METADATA = dict(
         "lint": LintCommand,
         "link": LinkIntoSitePackagesCommand,
         PrintRequiredPackagesCommand.name: PrintRequiredPackagesCommand,
-        TagAndDeployCommand.name: TagAndDeployCommand
+        TagAndDeployCommand.name: TagAndDeployCommand,
+        DeletePycFilesCommand.name: DeletePycFilesCommand
         },
 )
 
