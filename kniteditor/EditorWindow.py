@@ -1,7 +1,6 @@
 """This module contains the editor window."""
 import knittingpattern
 import os
-import sys
 from kivy.app import App
 from kivy.uix.pagelayout import PageLayout
 from kivy.uix.popup import Popup
@@ -180,14 +179,4 @@ class EditorWindow(App):
         pattern = patterns.patterns.at(0)
         self.root.knitting_pattern.show_pattern(pattern)
 
-
-def main(argv=sys.argv):
-    """Open the editor window."""
-    if "/test" in argv:
-        import pytest
-        errcode = pytest.main(["--pyargs", "knittingpattern", "kniteditor",
-                               "AYABInterface"])
-        sys.exit(errcode)
-    EditorWindow().run()
-
-__all__ = ["main", "EditorWindow", "Root", "LANGUAGE_CODE", "LANGUAGE_SECTION"]
+__all__ = ["EditorWindow", "Root", "LANGUAGE_CODE", "LANGUAGE_SECTION"]
