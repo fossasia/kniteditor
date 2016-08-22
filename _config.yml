@@ -1,4 +1,6 @@
-url: https://fossasia.github.io/kniteditor
+url: https://fossasia.github.io
+# set this to "" if in development mode
+base-url: /kniteditor
 permalink: /blog/:year-:month-:day/:title
 sourcecode:
   repository: "https://github.com/fossasia/kniteditor"
