@@ -3,18 +3,18 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv=refresh content='0.1; url=de' />
     <title>Knit Editor</title>
+    <script type="text/javascript">
+      var userLang = navigator.language || navigator.userLanguage;
+      var languages = ["de","en"];
+      for (var language in languages) {
+        if (userLang.indexOf(language) !== -1) {
+          alert(language);
+          window.location = language;
+        }
+      }
+    </script>
   </head>
-  <script type="text/javascript">
-  <!--
-  var userLang = navigator.language || navigator.userLanguage; 
-  if (userLang.indexOf("de") !== -1)
-  {
-    window.location = "de";
-  } else {
-    window.location = "en";
-  };
-  //-->
-  </script>
 </html>
 
