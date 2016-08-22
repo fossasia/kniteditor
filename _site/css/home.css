@@ -1,0 +1,42 @@
+
+.centered {
+  text-align: center;
+}
+
+.button {
+  
+}
+
+.button a {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-right: 1.6em;
+  padding-left: 1.6em;
+  background-color: green;
+  border-radius: 0.2em;
+  color: white;
+  letter-spacing: 0.1em;
+  margin: 1em;
+  display: inline-block;
+}
+
+h1 {
+  font-size: 300%;
+  margin-top: 0.5em;
+  margin-bottom: 0.1em;
+  line-height: 1.1;
+}
+
+h2 {
+  padding-top: 0.3em;
+  vertical-align: baseline;
+}
+
+.features {
+  margin-bottom: 2em;
+  text-align: center;
+}
+
+.features li {
+  display: inline-block;
+}

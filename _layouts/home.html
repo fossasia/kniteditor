@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html {% if page.categories %}lang="{{ page.categories | first | escape }}"{% endif %}>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title | escape }}</title>
+    {% include style.html %}
+  </head>
+  <body>
+    <main class="home">
+      {{ content }}
+    </main>
+  </body>
+</html>
