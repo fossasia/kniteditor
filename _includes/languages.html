@@ -11,8 +11,16 @@
     {% else %}
       {% assign flag_class = "" %}
     {% endif %}
-    <a class="language"
-       href="{{ site.baseurl | escape }}{{ page.url | replace_first: language_part_of_url, current_language_part_of_url | escape }}"
-      ><img class="{{ flag_class }} flag" src="{{ site.baseurl | escape }}/images/flags/{{ language | escape }}.svg" /></a>
+    {% assign translated_url = page.url | replace_first: language_part_of_url, current_language_part_of_url %}
+    {% comment %} Find out if page is translated and use default version if not. {% endcomment %}
+    {% for listed_page in site.pages %}
+      {% if translated_url == listed_page.url %}
+        <a class="language"
+           href="{{ site.baseurl | escape }}{{ translated_url | escape }}"
+           lang="{{ language }}"
+          ><img class="{{ flag_class }} flag" src="{{ site.baseurl | escape }}/images/flags/{{ language | escape }}.svg" /></a>
+        {% break %}
+      {% endif %}
+    {% endfor %}
   {% endfor %}
 </div>
