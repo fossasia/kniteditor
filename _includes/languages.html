@@ -1,0 +1,18 @@
+
+{% assign page_url_split = page.url | remove_first: "/" | split: "/" %}
+{% assign page_language = page_url_split | first %}
+{% assign language_part_of_url = "/" | append: page_language %}
+
+<div class="languages">
+  {% for language in site.languages %}
+    {% assign current_language_part_of_url = "/" | append: language %}
+    {% if current_language_part_of_url == language_part_of_url %}
+      {% assign flag_class = "current" %}
+    {% else %}
+      {% assign flag_class = "" %}
+    {% endif %}
+    <a class="language"
+       href="{{ site.baseurl | escape }}{{ page.url | replace_first: language_part_of_url, current_language_part_of_url | escape }}"
+      ><img class="{{ flag_class }} flag" src="{{ site.baseurl | escape }}/images/flags/{{ language | escape }}.svg" /></a>
+  {% endfor %}
+</div>
