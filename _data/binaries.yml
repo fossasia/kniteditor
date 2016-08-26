@@ -1,0 +1,25 @@
+- name: Windows
+  image: windows.svg
+  js:
+    - browser:
+      - windows
+      - Windows
+    - id:
+      - windows
+  download: /windows
+- name: Mac OSX
+  image: mac.svg
+  js:
+    - browser:
+      - ??
+    - id:
+      - mac
+  download: /mac
+- name: Ubuntu
+  image: ubuntu.svg
+  js:
+    - browser:
+      - ??
+    - id:
+      - ubuntu
+  download: /ubuntu

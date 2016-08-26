@@ -3,5 +3,17 @@ layout: home
 title: Download Knit Editor
 ---
 
-<h1>Download</h1>
+<div></div>
 
+<div class="downloads grid-whole padded equalize">
+  {% for os in site.data.binaries %}
+    <a id="{{ os.js.id | escape }}"
+       href="{{ os.download | escape }}"
+       class="os grid-third m-grid-whole s-grid-whole"
+       onclick="download('{{ os.js.id | escape }}')">
+        <img class="symbol" src="{{ site.baseurl | escape }}/images/os/{{ os.image | escape }}" />
+        <div class="name">{{ os.name | escape }}</div>
+    </a>
+  {% endfor %}
+  <iframe id="frame"></iframe>
+</div>

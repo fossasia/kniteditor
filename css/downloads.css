@@ -1,0 +1,36 @@
+
+.downloads {
+  text-align: center;
+  margin-top: 2em;
+}
+
+.downloads .os {
+  padding: 1em;
+  padding-top: 3em;
+  text-decoration: none;
+  color: green;
+}
+
+.downloads .os:hover {
+  background-color: green;
+  color: white;
+}
+
+.downloads .os .symbol {
+  height: 10em;
+}
+
+.downloads .os .name {
+  margin-top: 0.3em;
+  margin-bottom: 0.5em;
+}
+
+.downloads .os .name {
+  font-size: 300%;
+}
+
+.downloads #frame {
+  display: none;
+}
+
+
