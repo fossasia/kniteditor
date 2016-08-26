@@ -9,11 +9,11 @@ title: Download Knit Editor
   {% for os in site.data.binaries %}
     <a id="{{ os.js.id | escape }}"
        href="{{ os.download | escape }}"
-       class="os grid-third m-grid-whole s-grid-whole"
-       onclick="download('{{ os.js.id | escape }}')">
+       class="os grid-third m-grid-half s-grid-whole">
         <img class="symbol" src="{{ site.baseurl | escape }}/images/os/{{ os.image | escape }}" />
         <div class="name">{{ os.name | escape }}</div>
     </a>
   {% endfor %}
   <iframe id="frame"></iframe>
 </div>
+

@@ -1,25 +1,22 @@
 - name: Windows
   image: windows.svg
   js:
-    - browser:
-      - windows
-      - Windows
-    - id:
-      - windows
-  download: /windows
+    browser:
+    - windows
+    - Windows
+    id: windows
+  download: /kniteditor/test/windows
 - name: Mac OSX
   image: mac.svg
   js:
-    - browser:
-      - ??
-    - id:
-      - mac
-  download: /mac
+    browser:
+    - ??
+    id: mac
+  download: /kniteditor/test/mac
 - name: Ubuntu
   image: ubuntu.svg
   js:
-    - browser:
-      - ??
-    - id:
-      - ubuntu
-  download: /ubuntu
+    browser:
+    - ??
+    id: ubuntu
+  download: /kniteditor/test/ubuntu

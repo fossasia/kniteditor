@@ -1,0 +1,8 @@
+<script type="text/javascript">
+  var binaries = {{ site.data.binaries | map: "js" | jsonify }};
+  var downloads = {{ site.data.binaries | map: "download" | jsonify }};
+  for (var i = 0; i < downloads.length ; i++) {
+    binaries[i].download = downloads[i];
+  }
+</script>
+<script type="text/javascript" src="{{ site.baseurl | escape }}/javascript/downloads.js"></script>

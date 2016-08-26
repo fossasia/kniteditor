@@ -33,4 +33,6 @@
   display: none;
 }
 
-
+.downloads .marked {
+  background-color: #dddddd;
+}
