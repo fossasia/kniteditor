@@ -11,6 +11,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-# .\_includes\footer.html:4
+# file _includes/footer.html line 4
 msgid "Improve this site"
 msgstr "Improve this site"

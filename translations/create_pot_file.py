@@ -64,7 +64,10 @@ with open(POT_FILE_PATH, "w", encoding="UTF-8") as pot_file, \
     en_file.write(POT_HEADER)
     for file_path, line, string in translations:
         msgid = "msgid {}\n".format(potify(string))
-        comment = "# {}:{}\n".format(file_path, line)
+        if file_path[:2] in ("./", ".\\"):
+            file_path = file_path[2:]
+        file_path = file_path.replace("\\", "/")
+        comment = "# file {} line {}\n".format(file_path, line)
         
         pot_file.write("\n")
         pot_file.write(comment)
