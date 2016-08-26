@@ -6,6 +6,7 @@
     <title>{{ page.title | escape }}</title>
     {% include style.html %}
     {% include javascript.html %}
+    {% include variables.html %}
   </head>
   <body>
     <header>
@@ -14,5 +15,6 @@
     <main class="home">
       {{ content }}
     </main>
+    {% include footer.html %}
   </body>
 </html>
