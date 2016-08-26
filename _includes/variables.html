@@ -1,3 +1,3 @@
 {% assign page_url_split = page.url | remove_first: "/" | split: "/" %}
 {% assign language = page_url_split | first %}
-{% assign translate = site.data.translations %}
+{% assign translate = site.data.translations[language] %}

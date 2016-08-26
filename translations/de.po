@@ -3,15 +3,47 @@ msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: \n"
+"Last-Translator: \n"
 "Language-Team: \n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.8.8\n"
-"Last-Translator: \n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Language: de\n"
 
 # .\_includes\footer.html:4
 msgid "Improve this site"
 msgstr "Verbessere diese Seite"
+
+# file _includes/pages/index.html line 3
+msgid "Knit Editor"
+msgstr "Knit Editor"
+
+# file _includes/pages/index.html line 5
+msgid "Design knit work and knit it."
+msgstr "Erstelle Strickereien und stricke sie."
+
+# file _includes/pages/index.html line 8
+msgid "DOWNLOAD"
+msgstr "DOWNLOAD"
+
+# file _includes/pages/index.html line 13
+msgid "Display and export schemata."
+msgstr "Zeige Schemata an und exporiere sie."
+
+# file _includes/pages/index.html line 16
+msgid "Control your knitting machine."
+msgstr "Steuere deine Strickmaschine an."
+
+# file _includes/pages/index.html line 19
+msgid "Import and share designs."
+msgstr "Importiere und verteile Designs."
+
+# file _includes/pages/index.html line 23
+msgid "It's free and open-source."
+msgstr "Es ist frei und quelloffen."
+
+# file _includes/pages/index.html line 26
+msgid "START DEVELOPING"
+msgstr "ENTWICKLE MIT"

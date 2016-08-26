@@ -11,6 +11,112 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-# file _includes/footer.html line 4
+# file de/index.html line 2	
+# file en/index.html line 2	
+# file _includes/pages/index.html line 3	
+msgid "Knit Editor"
+msgstr "Knit Editor"
+
+# file _includes/footer.html line 4	
 msgid "Improve this site"
 msgstr "Improve this site"
+
+# file _includes/pages/develop.html line 2	
+msgid "Develop the Knit Editor"
+msgstr "Develop the Knit Editor"
+
+# file _includes/pages/develop.html line 7	
+msgid "TRANSLATE"
+msgstr "TRANSLATE"
+
+# file _includes/pages/develop.html line 8	
+msgid "PROGRAM"
+msgstr "PROGRAM"
+
+# file _includes/pages/develop.html line 11	
+msgid "Translate"
+msgstr "Translate"
+
+# file _includes/pages/develop.html line 15	
+msgid "This video shows you how to translate"
+msgstr "This video shows you how to translate"
+
+# file _includes/pages/develop.html line 16	
+msgid "the files"
+msgstr "the files"
+
+# file _includes/pages/develop.html line 25	
+msgid "You can also"
+msgstr "You can also"
+
+# file _includes/pages/develop.html line 25	
+msgid "translate this website"
+msgstr "translate this website"
+
+# file _includes/pages/develop.html line 29	
+msgid "Program"
+msgstr "Program"
+
+# file _includes/pages/develop.html line 34	
+msgid "The Knit Editor is part of"
+msgstr "The Knit Editor is part of"
+
+# file _includes/pages/develop.html line 34	
+msgid "FOSSASIAs knitting projects"
+msgstr "FOSSASIAs knitting projects"
+
+# file _includes/pages/develop.html line 38	
+msgid "Familiarize yourself with"
+msgstr "Familiarize yourself with"
+
+# file _includes/pages/develop.html line 38	
+msgid "Github"
+msgstr "Github"
+
+# file _includes/pages/develop.html line 41	
+msgid "Watch the"
+msgstr "Watch the"
+
+# file _includes/pages/develop.html line 41	
+msgid "development tutorials"
+msgstr "development tutorials"
+
+# file _includes/pages/develop.html line 44	
+msgid "Work on"
+msgstr "Work on"
+
+# file _includes/pages/develop.html line 44	
+msgid "issues"
+msgstr "issues"
+
+# file _includes/pages/download.html line 2	
+msgid "Download Knit Editor"
+msgstr "Download Knit Editor"
+
+# file _includes/pages/index.html line 5	
+msgid "Design knit work and knit it."
+msgstr "Design knit work and knit it."
+
+# file _includes/pages/index.html line 8	
+msgid "DOWNLOAD"
+msgstr "DOWNLOAD"
+
+# file _includes/pages/index.html line 13	
+msgid "Display and export schemata."
+msgstr "Display and export schemata."
+
+# file _includes/pages/index.html line 16	
+msgid "Control your knitting machine."
+msgstr "Control your knitting machine."
+
+# file _includes/pages/index.html line 19	
+msgid "Import and share designs."
+msgstr "Import and share designs."
+
+# file _includes/pages/index.html line 23	
+msgid "It's free and open-source."
+msgstr "It's free and open-source."
+
+# file _includes/pages/index.html line 26	
+msgid "START DEVELOPING"
+msgstr "START DEVELOPING"

@@ -11,6 +11,112 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-# file _includes/footer.html line 4
+# file de/index.html line 2	
+# file en/index.html line 2	
+# file _includes/pages/index.html line 3	
+msgid "Knit Editor"
+msgstr ""
+
+# file _includes/footer.html line 4	
 msgid "Improve this site"
+msgstr ""
+
+# file _includes/pages/develop.html line 2	
+msgid "Develop the Knit Editor"
+msgstr ""
+
+# file _includes/pages/develop.html line 7	
+msgid "TRANSLATE"
+msgstr ""
+
+# file _includes/pages/develop.html line 8	
+msgid "PROGRAM"
+msgstr ""
+
+# file _includes/pages/develop.html line 11	
+msgid "Translate"
+msgstr ""
+
+# file _includes/pages/develop.html line 15	
+msgid "This video shows you how to translate"
+msgstr ""
+
+# file _includes/pages/develop.html line 16	
+msgid "the files"
+msgstr ""
+
+# file _includes/pages/develop.html line 25	
+msgid "You can also"
+msgstr ""
+
+# file _includes/pages/develop.html line 25	
+msgid "translate this website"
+msgstr ""
+
+# file _includes/pages/develop.html line 29	
+msgid "Program"
+msgstr ""
+
+# file _includes/pages/develop.html line 34	
+msgid "The Knit Editor is part of"
+msgstr ""
+
+# file _includes/pages/develop.html line 34	
+msgid "FOSSASIAs knitting projects"
+msgstr ""
+
+# file _includes/pages/develop.html line 38	
+msgid "Familiarize yourself with"
+msgstr ""
+
+# file _includes/pages/develop.html line 38	
+msgid "Github"
+msgstr ""
+
+# file _includes/pages/develop.html line 41	
+msgid "Watch the"
+msgstr ""
+
+# file _includes/pages/develop.html line 41	
+msgid "development tutorials"
+msgstr ""
+
+# file _includes/pages/develop.html line 44	
+msgid "Work on"
+msgstr ""
+
+# file _includes/pages/develop.html line 44	
+msgid "issues"
+msgstr ""
+
+# file _includes/pages/download.html line 2	
+msgid "Download Knit Editor"
+msgstr ""
+
+# file _includes/pages/index.html line 5	
+msgid "Design knit work and knit it."
+msgstr ""
+
+# file _includes/pages/index.html line 8	
+msgid "DOWNLOAD"
+msgstr ""
+
+# file _includes/pages/index.html line 13	
+msgid "Display and export schemata."
+msgstr ""
+
+# file _includes/pages/index.html line 16	
+msgid "Control your knitting machine."
+msgstr ""
+
+# file _includes/pages/index.html line 19	
+msgid "Import and share designs."
+msgstr ""
+
+# file _includes/pages/index.html line 23	
+msgid "It's free and open-source."
+msgstr ""
+
+# file _includes/pages/index.html line 26	
+msgid "START DEVELOPING"
 msgstr ""
