@@ -1,5 +1,5 @@
 
-// var binaries is declared in html.
+// var binaries is declared in javascript.html.
 
 function getBinaryById(osId) {
   for (var i = 0; i < binaries.length ; i++) {
