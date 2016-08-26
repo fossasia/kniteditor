@@ -39,6 +39,11 @@
   display: inline-block;
 }
 
+.button2 a:hover {
+  color: white;
+  background-color: green;
+}
+
 h1 {
   font-size: 300%;
   margin-top: 0.5em;
