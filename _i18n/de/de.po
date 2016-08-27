@@ -1,65 +1,78 @@
-msgid "AYAB KNITTING"
+msgid ""
 msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: de\n"
+"X-Generator: Poedit 1.8.8\n"
+
+msgid "AYAB KNITTING"
+msgstr "AYAB KNITTING"
 
 msgid "Control your knitting machine."
-msgstr ""
+msgstr "Steuere Deine Strickmaschine an."
 
 msgid "DOWNLOAD"
-msgstr ""
+msgstr "DOWNLOAD"
 
 msgid "Design knit work and knit it."
-msgstr ""
+msgstr "Erstelle Strickzeug und stricke es."
 
 msgid "Display and export schemata."
-msgstr ""
+msgstr "Zeige Schemas and und Speichere sie."
 
-msgid "Familiarize yourself with <a href="http://try.github.io">Github</a>."
-msgstr ""
+msgid "Familiarize yourself with <a href=\"http://try.github.io\">Github</a>."
+msgstr "Mach Dich mit <a href=\"http://try.github.io\">Github</a> vertraut."
 
 msgid "For AYAB, you can also download the old software:"
-msgstr ""
+msgstr "Für AYAB kannst Du auch die alte Software runterladen:"
 
 msgid "Import and share designs."
-msgstr ""
+msgstr "Importiere and teile Designs."
 
 msgid "Improve this site"
-msgstr ""
+msgstr "Verbessere diese Seite"
 
 msgid "It's free and open-source."
-msgstr ""
+msgstr "Es ist frei und quqlloffen."
 
 msgid "Knit Editor"
-msgstr ""
+msgstr "Knit Editor"
 
 msgid "PROGRAM"
-msgstr ""
+msgstr "PROGRAMIEREN"
 
 msgid "Program"
-msgstr ""
+msgstr "Programmieren"
 
 msgid "START DEVELOPING"
-msgstr ""
+msgstr "ENTWICKLE MIT"
 
 msgid "TRANSLATE"
-msgstr ""
+msgstr "ÜBERSETZEN"
 
-msgid "The Knit Editor is part of <a href="https://knitting.fossasia.org#kniteditor">FOSSASIAs knitting projects</a>."
-msgstr ""
+msgid "The Knit Editor is part of <a href=\"https://knitting.fossasia.org#kniteditor\">FOSSASIAs knitting projects</a>."
+msgstr "Der Knit Editor ist Teil der <a href=\"https://knitting.fossasia.org#kniteditor\">Strickprojekte von FOSSASIA</a>."
 
-msgid "This video shows you how to translate <a href="https://github.com/fossasia/kniteditor/tree/master/kniteditor/localization/translations">the files</a>:"
-msgstr ""
+msgid "This video shows you how to translate <a href=\"https://github.com/fossasia/kniteditor/tree/master/kniteditor/localization/translations\">the files</a>:"
+msgstr "Dieses Video zeigt Dir, wie Du <a href=\"https://github.com/fossasia/kniteditor/tree/master/kniteditor/localization/translations\">die Dateien</a> übersetzen kannst:"
 
 msgid "Translate"
-msgstr ""
+msgstr "Übersetzen"
 
 msgid "VIEW ALL RELEASES"
-msgstr ""
+msgstr "ALLE VERSIONEN ANZEIGEN"
 
-msgid "Watch the <a href="https://www.youtube.com/playlist?list=PL_bQhtrnWFA8skye4GpQ2Y8kEHxLwQKHY">development tutorials</a>."
-msgstr ""
+msgid "Watch the <a href=\"https://www.youtube.com/playlist?list=PL_bQhtrnWFA8skye4GpQ2Y8kEHxLwQKHY\">development tutorials</a>."
+msgstr "Sieh Dir die <a href=\"https://www.youtube.com/playlist?list=PL_bQhtrnWFA8skye4GpQ2Y8kEHxLwQKHY\">Entwickler-Tutorials</a> an."
 
-msgid "Work on <a href="https://waffle.io/fossasia/kniteditor">issues</a>."
-msgstr ""
+msgid "Work on <a href=\"https://waffle.io/fossasia/kniteditor\">issues</a>."
+msgstr "Arbeite an <a href=\"https://waffle.io/fossasia/kniteditor\">Issues</a>."
 
-msgid "You can also translate <a href="https://github.com/fossasia/kniteditor/tree/gh-pages">this website</a>."
-msgstr ""
+msgid "You can also translate <a href=\"https://github.com/fossasia/kniteditor/tree/gh-pages\">this website</a>."
+msgstr "Du kannst auch <a href=\"https://github.com/fossasia/kniteditor/tree/gh-pages\">diese Webseite überstzen</a>."
