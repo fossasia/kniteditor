@@ -12,13 +12,97 @@ msgstr ""
 "X-Generator: Poedit 1.8.8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+# file _includes/pages/index.html line 3
+msgid "Knit Editor"
+msgstr "Knit Editor"
+
+# file en/develop.html line 2
+msgid "Develop the Knit Editor"
+msgstr "Entwickle den Knit Editor"
+
+# file en/download.html line 2
+msgid "Download the Knit Editor"
+msgstr "Downloade den Knit Editor"
+
 # .\_includes\footer.html:4
 msgid "Improve this site"
 msgstr "Verbessere diese Seite"
 
-# file _includes/pages/index.html line 3
-msgid "Knit Editor"
-msgstr "Knit Editor"
+# file _includes/pages/develop.html line 4
+msgid "TRANSLATE"
+msgstr "ÜBERSETZEN"
+
+# file _includes/pages/develop.html line 5
+msgid "PROGRAM"
+msgstr "PROGRAMMIEREN"
+
+# file _includes/pages/develop.html line 8
+msgid "Translate"
+msgstr "Übersetzen"
+
+# file _includes/pages/develop.html line 12
+msgid "This video shows you how to translate"
+msgstr "Dieses Video zeigt dir, wie du übersetzen kannst"
+
+# file _includes/pages/develop.html line 13
+msgid "the files"
+msgstr ""
+
+# file _includes/pages/develop.html line 22
+msgid "You can also"
+msgstr ""
+
+# file _includes/pages/develop.html line 22
+msgid "translate this website"
+msgstr ""
+
+# file _includes/pages/develop.html line 26
+msgid "Program"
+msgstr ""
+
+# file _includes/pages/develop.html line 31
+msgid "The Knit Editor is part of"
+msgstr ""
+
+# file _includes/pages/develop.html line 31
+msgid "FOSSASIAs knitting projects"
+msgstr ""
+
+# file _includes/pages/develop.html line 35
+msgid "Familiarize yourself with"
+msgstr ""
+
+# file _includes/pages/develop.html line 35
+msgid "Github"
+msgstr ""
+
+# file _includes/pages/develop.html line 38
+msgid "Watch the"
+msgstr ""
+
+# file _includes/pages/develop.html line 38
+msgid "development tutorials"
+msgstr ""
+
+# file _includes/pages/develop.html line 41
+msgid "Work on"
+msgstr "\"\" href=\\\"\\\""
+
+# file _includes/pages/develop.html line 41
+msgid "issues"
+msgstr ""
+
+# file _includes/pages/download.html line 18
+msgid "VIEW ALL RELEASES"
+msgstr ""
+
+# file _includes/pages/download.html line 23
+msgid "For AYAB, you can also download the old software:"
+msgstr ""
+
+# file _includes/pages/download.html line 29
+msgid "AYAB KNITTING"
+msgstr ""
 
 # file _includes/pages/index.html line 5
 msgid "Design knit work and knit it."

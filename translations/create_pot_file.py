@@ -41,7 +41,7 @@ os.chdir(TRANSLATION_ROOT)
 #   translation["..."]
 #
 # and list them
-translation_pattern = re.compile("((.*?\\{\\{[^\\}\\{]*?translat(?:ions?|e)\\s*\[\\s*)[\\s*'\"]([^\\}\\{]*?)[\\s*'\"]\\s*\\][^\}\{]*?\\}\\})", re.DOTALL)
+translation_pattern = re.compile("((.*?\\{\\{[^\\}\\{]*?translat(?:ions?|e)\\s*\\[\\s*)(\"[^\\}\\{]*?\\s*\")\\s*\\][^\\}\\{]*?\\}\\})", re.DOTALL)
 title_pattern = re.compile("(^---(?:[^\n]|\n(?=[^-])|\n(?=-[^-])|\n(?=--[^-]))*)title:\s*([^\n]*?)\s*\n")
 
 translations = OrderedDict()
@@ -66,7 +66,7 @@ for root, dirs, files in os.walk("."):
             for all, before, string in translation_pattern.findall(content):
                 current_line_number = line_number + before.count("\n")
                 line_number += all.count("\n")
-                translate(string, file_path, current_line_number)
+                translate(json.loads(string), file_path, current_line_number)
 
 potify = json.dumps
 

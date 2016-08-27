@@ -17,10 +17,11 @@ TRANSLATIONS_PATH = os.path.join(HERE, TRANSLATIONS)
 
 
 translation_pattern = re.compile("^msgid((?:[^\n]|\n[^\n])*)\nmsgstr((?:[^\n]|\n[^\n])*)(?:\n\n|\n?$)", re.MULTILINE)
-string_pattern = re.compile("\"((?:[^\"]|\\\\|\\\")*?)\"")
+string_pattern = re.compile("\"((?:\\\\\\\\|\\\\[^\\\\]|[^\"\\\\])*)\"")
 
 def string_from(translation_match):
-    return json.loads("\"" + "".join(string_pattern.findall(translation_match)) + "\"")
+    matches = string_pattern.findall(translation_match)
+    return json.loads("\"" + "".join(matches) + "\"")
 
 
 strings = defaultdict(OrderedDict)  # language : {id : translation}
@@ -33,12 +34,13 @@ for file_name in sorted(po_files):
     all_languages.add(language)
     file_path = os.path.join(HERE, file_name)
     with open(file_path, encoding="UTF-8") as file:
-        for id, translation in translation_pattern.findall(file.read()):
+        content = file.read()
+        for id, translation in translation_pattern.findall(content):
+            print("{} id: {} => {}".format(language, repr(id), repr(translation)))
             _id = string_from(id)
             if not _id:
                 continue
             _translation = string_from(translation)
-            print("{}: {} => {}".format(language, repr(_id), repr(_translation)))
             strings[language][_id] = _translation
             ids.add(_id)
 

@@ -11,6 +11,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+# file de/develop.html line 2	
+# file en/develop.html line 2	
+msgid "Develop the Knit Editor"
+msgstr ""
+
+# file de/download.html line 2	
+# file en/download.html line 2	
+msgid "Download the Knit Editor"
+msgstr ""
+
 # file de/index.html line 2	
 # file en/index.html line 2	
 # file _includes/pages/index.html line 3	
@@ -21,76 +31,56 @@ msgstr ""
 msgid "Improve this site"
 msgstr ""
 
-# file _includes/pages/develop.html line 2	
-msgid "Develop the Knit Editor"
-msgstr ""
-
-# file _includes/pages/develop.html line 7	
+# file _includes/pages/develop.html line 4	
 msgid "TRANSLATE"
 msgstr ""
 
-# file _includes/pages/develop.html line 8	
+# file _includes/pages/develop.html line 5	
 msgid "PROGRAM"
 msgstr ""
 
-# file _includes/pages/develop.html line 11	
+# file _includes/pages/develop.html line 8	
 msgid "Translate"
 msgstr ""
 
-# file _includes/pages/develop.html line 15	
-msgid "This video shows you how to translate"
+# file _includes/pages/develop.html line 12	
+msgid "This video shows you how to translate <a href=\"https://github.com/fossasia/kniteditor/tree/master/kniteditor/localization/translations\">the files</a>:"
 msgstr ""
 
-# file _includes/pages/develop.html line 16	
-msgid "the files"
-msgstr ""
-
-# file _includes/pages/develop.html line 25	
-msgid "You can also"
+# file _includes/pages/develop.html line 21	
+msgid "You can also <a href=\"https://github.com/fossasia/kniteditor/tree/gh-pages\">translate this website</a>."
 msgstr ""
 
 # file _includes/pages/develop.html line 25	
-msgid "translate this website"
-msgstr ""
-
-# file _includes/pages/develop.html line 29	
 msgid "Program"
 msgstr ""
 
-# file _includes/pages/develop.html line 34	
-msgid "The Knit Editor is part of"
+# file _includes/pages/develop.html line 30	
+msgid "The Knit Editor is part of <a href=\"https://knitting.fossasia.org#kniteditor\"> FOSSASIAs knitting projects</a>."
 msgstr ""
 
 # file _includes/pages/develop.html line 34	
-msgid "FOSSASIAs knitting projects"
+msgid "Familiarize yourself with <a href=\"http://try.github.io/\">Github</a>."
 msgstr ""
 
-# file _includes/pages/develop.html line 38	
-msgid "Familiarize yourself with"
+# file _includes/pages/develop.html line 37	
+msgid "Watch the <a href=\"https://www.youtube.com/playlist?list=PL_bQhtrnWFA8skye4GpQ2Y8kEHxLwQKHY\">development tutorials</a>."
 msgstr ""
 
-# file _includes/pages/develop.html line 38	
-msgid "Github"
+# file _includes/pages/develop.html line 40	
+msgid "Work on <a href=\"https://waffle.io/fossasia/kniteditor\">issues</a>."
 msgstr ""
 
-# file _includes/pages/develop.html line 41	
-msgid "Watch the"
+# file _includes/pages/download.html line 18	
+msgid "VIEW ALL RELEASES"
 msgstr ""
 
-# file _includes/pages/develop.html line 41	
-msgid "development tutorials"
+# file _includes/pages/download.html line 23	
+msgid "For AYAB, you can also download the old software:"
 msgstr ""
 
-# file _includes/pages/develop.html line 44	
-msgid "Work on"
-msgstr ""
-
-# file _includes/pages/develop.html line 44	
-msgid "issues"
-msgstr ""
-
-# file _includes/pages/download.html line 2	
-msgid "Download Knit Editor"
+# file _includes/pages/download.html line 29	
+msgid "AYAB KNITTING"
 msgstr ""
 
 # file _includes/pages/index.html line 5	
