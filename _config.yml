@@ -4,6 +4,4 @@ permalink: /blog/:year-:month-:day/:title
 sourcecode:
   repository: "https://github.com/fossasia/kniteditor"
   root: "https://github.com/fossasia/kniteditor/tree/gh-pages"
-languages:
-  - en
-  - de
+languages: ["en", "de"]

@@ -1,0 +1,17 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    fast_gettext (0.9.2)
+    get_pomo (0.9.2)
+    jekyll-gettext-plugin (0.0.3)
+      fast_gettext (~> 0.8)
+      get_pomo (~> 0.6)
+
+PLATFORMS
+  x86-mingw32
+
+DEPENDENCIES
+  jekyll-gettext-plugin
+
+BUNDLED WITH
+   1.12.5

@@ -44,32 +44,32 @@ msgid "Translate"
 msgstr "Translate"
 
 # file _includes/pages/develop.html line 12	
-msgid "This video shows you how to translate <a href=\"https://github.com/fossasia/kniteditor/tree/master/kniteditor/localization/translations\">the files</a>:"
-msgstr "This video shows you how to translate <a href=\"https://github.com/fossasia/kniteditor/tree/master/kniteditor/localization/translations\">the files</a>:"
+msgid "This video shows you how to translate the files: https://github.com/fossasia/kniteditor/tree/master/kniteditor/localization/translations:"
+msgstr "This video shows you how to translate the files: https://github.com/fossasia/kniteditor/tree/master/kniteditor/localization/translations:"
 
 # file _includes/pages/develop.html line 21	
-msgid "You can also <a href=\"https://github.com/fossasia/kniteditor/tree/gh-pages\">translate this website</a>."
-msgstr "You can also <a href=\"https://github.com/fossasia/kniteditor/tree/gh-pages\">translate this website</a>."
+msgid "You can also translate this website: https://github.com/fossasia/kniteditor/tree/gh-pages."
+msgstr "You can also translate this website: https://github.com/fossasia/kniteditor/tree/gh-pages."
 
 # file _includes/pages/develop.html line 25	
 msgid "Program"
 msgstr "Program"
 
 # file _includes/pages/develop.html line 30	
-msgid "The Knit Editor is part of <a href=\"https://knitting.fossasia.org#kniteditor\"> FOSSASIAs knitting projects</a>."
-msgstr "The Knit Editor is part of <a href=\"https://knitting.fossasia.org#kniteditor\"> FOSSASIAs knitting projects</a>."
+msgid "The Knit Editor is part of FOSSASIAs knitting projects: https://knitting.fossasia.org#kniteditor."
+msgstr "The Knit Editor is part of FOSSASIAs knitting projects: https://knitting.fossasia.org#kniteditor."
 
 # file _includes/pages/develop.html line 34	
-msgid "Familiarize yourself with <a href=\"http://try.github.io/\">Github</a>."
-msgstr "Familiarize yourself with <a href=\"http://try.github.io/\">Github</a>."
+msgid "Familiarize yourself with Github: http://try.github.io/."
+msgstr "Familiarize yourself with Github: http://try.github.io/."
 
 # file _includes/pages/develop.html line 37	
-msgid "Watch the <a href=\"https://www.youtube.com/playlist?list=PL_bQhtrnWFA8skye4GpQ2Y8kEHxLwQKHY\">development tutorials</a>."
-msgstr "Watch the <a href=\"https://www.youtube.com/playlist?list=PL_bQhtrnWFA8skye4GpQ2Y8kEHxLwQKHY\">development tutorials</a>."
+msgid "Watch the development tutorials: https://www.youtube.com/playlist?list=PL_bQhtrnWFA8skye4GpQ2Y8kEHxLwQKHY."
+msgstr "Watch the development tutorials: https://www.youtube.com/playlist?list=PL_bQhtrnWFA8skye4GpQ2Y8kEHxLwQKHY."
 
 # file _includes/pages/develop.html line 40	
-msgid "Work on <a href=\"https://waffle.io/fossasia/kniteditor\">issues</a>."
-msgstr "Work on <a href=\"https://waffle.io/fossasia/kniteditor\">issues</a>."
+msgid "Work on issues: https://waffle.io/fossasia/kniteditor."
+msgstr "Work on issues: https://waffle.io/fossasia/kniteditor."
 
 # file _includes/pages/download.html line 18	
 msgid "VIEW ALL RELEASES"
