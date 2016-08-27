@@ -78,7 +78,8 @@ module Jekyll
 
     def save_missing_translations
       filename = self.source + "/_i18n/" + self.config['lang'] + '/' + self.config['lang'] + '.po'
-      existing_translations = GetPomo.unique_translations(GetPomo::PoFile.parse(File.read(filename)))
+      content = File.open(filename, "r:UTF-8").read()
+      existing_translations = GetPomo.unique_translations(GetPomo::PoFile.parse(content))
       
       # ignores any keys that already exist
       missing_translations_msgids = @missing_translations.get_translations.reject {|msgid| existing_translations.find {|trans| trans.msgid == msgid}}
