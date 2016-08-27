@@ -1,182 +1,23 @@
-msgid ""
-msgstr ""
-"Project-Id-Version: \n"
-"POT-Creation-Date: \n"
-"PO-Revision-Date: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: de\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.8\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-
-# file en/develop.html line 2
-msgid "Develop the Knit Editor"
-msgstr "Entwickle den Knit Editor"
-
-# file en/download.html line 2
-msgid "Download the Knit Editor"
-msgstr "Downloade den Knit Editor"
-
-# file _includes/pages/index.html line 3
-msgid "Knit Editor"
-msgstr "Knit Editor"
-
-# .\_includes\footer.html:4
-msgid "Improve this site"
-msgstr "Verbessere diese Seite"
-
-# file _includes/pages/develop.html line 4
-msgid "TRANSLATE"
-msgstr "ÜBERSETZEN"
-
-# file _includes/pages/develop.html line 5
-msgid "PROGRAM"
-msgstr "PROGRAMMIEREN"
-
-# file _includes/pages/develop.html line 8
-msgid "Translate"
-msgstr "Übersetzen"
-
-# file _includes/pages/develop.html line 12
-msgid ""
-"This video shows you how to translate the files: https://github.com/fossasia/"
-"kniteditor/tree/master/kniteditor/localization/translations:"
-msgstr ""
-"Dieses Video zeigt Dir, wie du <a href=\"https://github.com/fossasia/"
-"kniteditor/tree/master/kniteditor/localization/translations\">die Dateien</"
-"a> übersetzt:"
-
-# file _includes/pages/develop.html line 21
-msgid ""
-"You can also translate this website: https://github.com/fossasia/kniteditor/"
-"tree/gh-pages."
+msgid ""Control your knitting machine.""
 msgstr ""
 
-# file _includes/pages/develop.html line 26
-msgid "Program"
-msgstr "Programmiere"
-
-# file _includes/pages/develop.html line 30
-msgid ""
-"The Knit Editor is part of FOSSASIAs knitting projects: https://knitting."
-"fossasia.org#kniteditor."
+msgid ""DOWNLOAD""
 msgstr ""
 
-# file _includes/pages/develop.html line 34
-msgid "Familiarize yourself with Github: http://try.github.io/."
+msgid ""Design knit work and knit it.""
 msgstr ""
 
-# file _includes/pages/develop.html line 37
-msgid ""
-"Watch the development tutorials: https://www.youtube.com/playlist?"
-"list=PL_bQhtrnWFA8skye4GpQ2Y8kEHxLwQKHY."
+msgid ""Display and export schemata.""
 msgstr ""
 
-# file _includes/pages/develop.html line 40
-msgid "Work on issues: https://waffle.io/fossasia/kniteditor."
+msgid ""Import and share designs.""
 msgstr ""
 
-# file _includes/pages/download.html line 18
-msgid "VIEW ALL RELEASES"
-msgstr "ALLE VERSIONEN ANZEIGEN"
+msgid ""It's free and open-source.""
+msgstr ""
 
-# file _includes/pages/download.html line 23
-msgid "For AYAB, you can also download the old software:"
-msgstr "Für AYAB kannst Du auch die alte Software runterladen:"
+msgid ""Knit Editor""
+msgstr ""
 
-# file _includes/pages/download.html line 29
-msgid "AYAB KNITTING"
-msgstr "AYAB KNITTING"
-
-# file _includes/pages/index.html line 5
-msgid "Design knit work and knit it."
-msgstr "Erstelle Strickereien und stricke sie."
-
-# file _includes/pages/index.html line 8
-msgid "DOWNLOAD"
-msgstr "DOWNLOAD"
-
-# file _includes/pages/index.html line 13
-msgid "Display and export schemata."
-msgstr "Zeige Schemata an und exporiere sie."
-
-# file _includes/pages/index.html line 16
-msgid "Control your knitting machine."
-msgstr "Steuere deine Strickmaschine an."
-
-# file _includes/pages/index.html line 19
-msgid "Import and share designs."
-msgstr "Importiere und verteile Designs."
-
-# file _includes/pages/index.html line 23
-msgid "It's free and open-source."
-msgstr "Es ist frei und quelloffen."
-
-# file _includes/pages/index.html line 26
-msgid "START DEVELOPING"
-msgstr "ENTWICKLE MIT"
-
-# file _includes/pages/develop.html line 12
-#~ msgid ""
-#~ "This video shows you how to translate <a href=\"https://github.com/"
-#~ "fossasia/kniteditor/tree/master/kniteditor/localization/translations"
-#~ "\">the files</a>:"
-#~ msgstr ""
-#~ "Dieses Video zeigt, wie du <a href=\"https://github.com/fossasia/"
-#~ "kniteditor/tree/master/kniteditor/localization/translations\">die "
-#~ "Dateien</a> übersetzen kannst:"
-
-# file _includes/pages/develop.html line 21
-#~ msgid ""
-#~ "You can also <a href=\"https://github.com/fossasia/kniteditor/tree/gh-"
-#~ "pages\">translate this website</a>."
-#~ msgstr ""
-#~ "Du kannst auch <a href=\"https://github.com/fossasia/kniteditor/tree/gh-"
-#~ "pages\">diese Webseite überstzen</a>."
-
-# file _includes/pages/develop.html line 30
-#~ msgid ""
-#~ "The Knit Editor is part of <a href=\"https://knitting.fossasia."
-#~ "org#kniteditor\">FOSSASIAs knitting projects</a>."
-#~ msgstr ""
-#~ "Der Knit Editor ist Teil der <a href=\"https://knitting.fossasia."
-#~ "org#kniteditor\">Strickprojekte FOSSASIAs</a>."
-
-# file _includes/pages/develop.html line 34
-#~ msgid ""
-#~ "Familiarize yourself with <a href=\"http://try.github.io/\">Github</a>."
-#~ msgstr ""
-#~ "Mach Dich mit <a href=\"http://try.github.io/\">Github</a> vertraut."
-
-# file _includes/pages/develop.html line 37
-#~ msgid ""
-#~ "Watch the <a href=\"https://www.youtube.com/playlist?"
-#~ "list=PL_bQhtrnWFA8skye4GpQ2Y8kEHxLwQKHY\">development tutorials</a>."
-#~ msgstr ""
-#~ "Sieh Dir die <a href=\"https://www.youtube.com/playlist?"
-#~ "list=PL_bQhtrnWFA8skye4GpQ2Y8kEHxLwQKHY\">Entwickler-Tutorials</a> an."
-
-# file _includes/pages/develop.html line 40
-#~ msgid ""
-#~ "Work on <a href=\"https://waffle.io/fossasia/kniteditor\">issues</a>."
-#~ msgstr ""
-#~ "Arbeite an <a href=\"https://waffle.io/fossasia/kniteditor\">Issues</a>."
-
-# file _includes/pages/develop.html line 30
-#~ msgid ""
-#~ "The Knit Editor is part of <a href=\"https://knitting.fossasia."
-#~ "org#kniteditor\"> FOSSASIAs knitting projects</a>."
-#~ msgstr ""
-#~ "Der Knit Editor ist Teil der <a href=\"https://knitting.fossasia."
-#~ "org#kniteditor\">Strickprojekte FOSSASIAs</a>."
-
-# file _includes/pages/develop.html line 12
-#~ msgid "This video shows you how to translate"
-#~ msgstr "Dieses Video zeigt dir, wie du übersetzen kannst"
-
-# file _includes/pages/develop.html line 41
-#~ msgid "Work on"
-#~ msgstr "\"\" href=\\\"\\\""
+msgid ""START DEVELOPING""
+msgstr ""
