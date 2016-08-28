@@ -1,0 +1,22 @@
+
+footer {
+  text-align: center;
+  overflow: hidden;
+  padding: 1em;
+  padding-top: 3em;
+  left: 0px;
+  right: 0px;
+}
+
+footer img {
+  height: 2em;
+  vertical-align: middle;
+}
+
+footer a {
+  color: green;
+  text-decoration: none;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
