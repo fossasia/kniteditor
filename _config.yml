@@ -3,7 +3,7 @@ baseurl: /kniteditor
 permalink: /blog/:year-:month-:day/:title
 sourcecode:
   repository: "https://github.com/fossasia/kniteditor"
-  root: "https://github.com/fossasia/kniteditor/tree/gh-pages"
+  root: "https://github.com/fossasia/kniteditor/tree/gh-pages-source"
 languages: ["en", "de"]
 exclude: ["Gemfile", "Gemfile.lock"]
 include: [".nojekyll"]
