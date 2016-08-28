@@ -1,0 +1,4 @@
+[submodule "_site"]
+	path = _site
+	url = ./
+	branch = gh-pages
