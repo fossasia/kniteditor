@@ -5,3 +5,4 @@ sourcecode:
   repository: "https://github.com/fossasia/kniteditor"
   root: "https://github.com/fossasia/kniteditor/tree/gh-pages"
 languages: ["en", "de"]
+exclude: ["Gemfile", "Gemfile.lock"]

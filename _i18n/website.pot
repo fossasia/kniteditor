@@ -1,12 +1,79 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
-"POT-Creation-Date: \n"
-"PO-Revision-Date: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: de\n"
-"X-Generator: PotLocalizationPlugin\n"
+"Language: en\n"
+"X-Generator: Jekyll::PotLocalizationPlugin\n"
+
+msgid "Develop the Knit Editor"
+msgstr ""
+
+msgid "Download the Knit Editor"
+msgstr ""
+
+msgid "Knit Editor"
+msgstr ""
+
+msgid "TRANSLATE"
+msgstr ""
+
+msgid "PROGRAM"
+msgstr ""
+
+msgid "Translate"
+msgstr ""
+
+msgid "This video shows you how to translate <a href="https://github.com/fossasia/kniteditor/tree/master/kniteditor/localization/translations">the files</a>:"
+msgstr ""
+
+msgid "You can also translate <a href="https://github.com/fossasia/kniteditor/tree/gh-pages">this website</a>."
+msgstr ""
+
+msgid "Program"
+msgstr ""
+
+msgid "The Knit Editor is part of <a href="https://knitting.fossasia.org#kniteditor">FOSSASIAs knitting projects</a>."
+msgstr ""
+
+msgid "Familiarize yourself with <a href="http://try.github.io">Github</a>."
+msgstr ""
+
+msgid "Watch the <a href="https://www.youtube.com/playlist?list=PL_bQhtrnWFA8skye4GpQ2Y8kEHxLwQKHY">development tutorials</a>."
+msgstr ""
+
+msgid "Work on <a href="https://waffle.io/fossasia/kniteditor">issues</a>."
+msgstr ""
+
+msgid "Improve this site"
+msgstr ""
+
+msgid "VIEW ALL RELEASES"
+msgstr ""
+
+msgid "For AYAB, you can also download the old software:"
+msgstr ""
+
+msgid "AYAB KNITTING"
+msgstr ""
+
+msgid "Design knit work and knit it."
+msgstr ""
+
+msgid "DOWNLOAD"
+msgstr ""
+
+msgid "Display and export schemata."
+msgstr ""
+
+msgid "Control your knitting machine."
+msgstr ""
+
+msgid "Import and share designs."
+msgstr ""
+
+msgid "It's free and open-source."
+msgstr ""
+
+msgid "START DEVELOPING"
+msgstr ""
