@@ -1,7 +1,6 @@
 
 require 'fast_gettext'
 require 'get_pomo'
-
 require 'pry'
 
 class TranslationLogger
@@ -36,14 +35,7 @@ module Jekyll
       dest_org = self.dest
 
       # loop
-      self.config['lang'] = languages.first
-      puts
-      puts "Building site for default language: \"#{self.config['lang']}\" to: " + self.dest
-      self.load_translations
-      process_org
-      self.save_missing_translations
-      
-      languages.drop(1).each do |lang|
+      languages.each do |lang|
 
         # build site for language lang
         self.dest = self.dest + "/" + lang

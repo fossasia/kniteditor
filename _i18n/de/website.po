@@ -39,13 +39,13 @@ msgid "Improve this site"
 msgstr "Verbessere diese Seite"
 
 msgid "It's free and open-source."
-msgstr "Es ist frei und quqlloffen."
+msgstr "Es ist frei und quelloffen."
 
 msgid "Knit Editor"
 msgstr "Knit Editor"
 
 msgid "PROGRAM"
-msgstr "PROGRAMIEREN"
+msgstr "PROGRAMMIEREN"
 
 msgid "Program"
 msgstr "Programmieren"
@@ -54,7 +54,7 @@ msgid "START DEVELOPING"
 msgstr "ENTWICKLE MIT"
 
 msgid "TRANSLATE"
-msgstr "ÜBERSETZEN"
+msgstr "ÜBERSETZE"
 
 msgid "The Knit Editor is part of <a href=\"https://knitting.fossasia.org#kniteditor\">FOSSASIAs knitting projects</a>."
 msgstr "Der Knit Editor ist Teil der <a href=\"https://knitting.fossasia.org#kniteditor\">Strickprojekte von FOSSASIA</a>."
