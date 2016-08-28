@@ -1,3 +1,4 @@
+@echo off
 cmd /c jekyll build --trace
 cd _site
 git add .
