@@ -5,5 +5,5 @@ sourcecode:
   repository: "https://github.com/fossasia/kniteditor"
   root: "https://github.com/fossasia/kniteditor/tree/gh-pages-source"
 languages: ["en", "de"]
-exclude: ["Gemfile", "Gemfile.lock"]
+exclude: ["Gemfile", "Gemfile.lock", "commit.bat"]
 include: [".nojekyll"]
