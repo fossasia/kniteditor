@@ -1,0 +1,51 @@
+
+.centered {
+  text-align: center;
+}
+
+.button {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-right: 1.6em;
+  padding-left: 1.6em;
+  background-color: green;
+  border-radius: 0.2em;
+  color: white;
+  letter-spacing: 0.1em;
+  display: inline-block;
+  text-decoration: none;
+  margin: 1em;
+  margin-right: 2em;
+  margin-left: 2em;
+}
+
+.button2 {
+  padding: 0.1em;
+  border-radius: 0.4em;
+  background-color: green;
+  letter-spacing: 0.1em;
+  margin: 1em;
+  display: inline-block;
+  
+}
+
+.button2 a {
+  text-decoration: none;
+  border-radius: 0.3em;
+  color: green;
+  padding-top: 0.7em;
+  padding-bottom: 0.7em;
+  padding-right: 1.3em;
+  padding-left: 1.3em;
+  background-color: white;
+  display: inline-block;
+}
+
+.button2 a:hover {
+  color: white;
+  background-color: green;
+}
+
+.button-holder {
+  margin-bottom: 2em;
+}

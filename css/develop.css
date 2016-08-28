@@ -1,0 +1,22 @@
+
+p {
+  margin: 1em;
+}
+
+.description {
+  margin-top: 2.5em;
+}
+
+a {
+  color: green;
+  text-decoration: none;
+}
+
+.listing {
+  display: inline-block;
+}
+
+.listing li {
+  text-align: left;
+  margin-top: 0.6em;
+}

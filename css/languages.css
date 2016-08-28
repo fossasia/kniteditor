@@ -1,0 +1,15 @@
+header .languages {
+  position: absolute;
+  display: inline-block;
+  right: 1em;
+}
+
+
+header .languages .flag {
+  height: 2em;
+  
+}
+
+header .languages .current {
+  box-shadow: 0.1em 0.1em 0.05em #888888;
+}
