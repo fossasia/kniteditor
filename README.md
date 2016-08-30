@@ -9,7 +9,7 @@ Contribute
 
 To contribute to this website you can
 
-- [translate][translate] the website into other languages
+- [translate][translate] the website into other languages. No installation required.
   - [update translations][update-translations] for existing languages
 - [install][install] the website and [change its code][solve-issues].
 
@@ -77,7 +77,7 @@ You can translate the website into your own langauge.
 5. Create a commit and  a [pull-request][pull-request] with the updated files.
 
 
-### Update Existing Translaions
+### Update Existing Translations
 
 Existing translations may be outdated.
 You can update them with the following process:
@@ -90,9 +90,10 @@ You can update them with the following process:
 [jekyll]: http://jekyllrb.com/
 [jekyll-tips]: http://jekyll.tips/
 [issues]: https://github.com/fossasia/kniteditor/issues?q=is%3Aissue+is%3Aopen+label%3Awebsite
-[translate]: #translate-into-otehr-languages
+[translate]: #translate-into-other-languages
 [update-translations]: #update-existing-translations
 [solve-issues]: #solve-issues
 [poedit]: http://poedit.net/
 [pull-request]: https://help.github.com/articles/creating-a-pull-request/
 [contribute]: #contribute
+[install]: #install
