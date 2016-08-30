@@ -63,6 +63,8 @@ We have two branches:
 
 You can view all issues of the webste with the [website tag][issues].
 
+If you work on these files continuously, you may find it handy to use the [commit.bat](commit.bat) and [push.bat](push.bat) or correspoding linux files which update the `gh-pages` branch based on the changes on the `gh-pages-source` branch.
+
 ### Translate Into Other Languages
 
 You can translate the website into your own langauge.
