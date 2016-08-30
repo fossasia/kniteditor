@@ -206,7 +206,6 @@ msgstr ""
     
     def add_localization_to_dependency(site, language, path)
       po_file = site.pot_localization_plugin.po_file(language)
-      puts ["add dependency", language, path, po_file].to_s
       site.regenerator.add_dependency(
         site.in_source_dir(path),
         po_file
