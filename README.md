@@ -67,7 +67,7 @@ If you work on these files continuously, you may find it handy to use the [commi
 
 ### Translate Into Other Languages
 
-You can translate the website into your own langauge.
+You can translate the website into your own language.
 
 1. Install [POEdit][poedit]
 2. In the [_i18n](_i18n) folder, you can find the translations. Your language has a [language code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes).
