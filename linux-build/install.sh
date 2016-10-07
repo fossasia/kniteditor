@@ -25,7 +25,9 @@ echo "# build the distribution"
 python3 -m pip install $USER wheel
 python3 setup.py sdist --formats=zip
 python3 setup.py bdist_wheel
+python3 -m setup.py bdist_rpm
 python3 -m pip uninstall -y wheel
+
 
 echo "# install from the zip file to see if files were forgotten"
 python3 -m pip install $USER --upgrade dist/kniteditor-${PACKAGE_VERSION}.zip
