@@ -15,6 +15,9 @@ matrix:
       language: generic
   allow_failures:
     - os: osx
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get install rpm
 
 install:
   - if [ "$TRAVIS_OS_NAME" == "osx"   ] ; then   mac-build/install.sh ; fi
