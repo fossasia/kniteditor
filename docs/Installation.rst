@@ -90,7 +90,8 @@ test the installed version:
 Installation from Repository
 ----------------------------
 
-You can setup the development version under Windows and Linux.
+You can setup the development version under Windows and Linux using the
+`source code repository <https://github.com/fossasia/kniteditor/>`__.
 
 .. _installation-repository-linux:
 
