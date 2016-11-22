@@ -90,7 +90,8 @@ test the installed version:
 Installation from Repository
 ----------------------------
 
-You can setup the development version under Windows and Linux.
+You can setup the development version under Windows and Linux using the
+`source code repository <https://github.com/fossasia/kniteditor/>`__.
 
 .. _installation-repository-linux:
 
@@ -107,6 +108,8 @@ If you wish to get latest source version running, you can check out the reposito
   sudo python3 -m pip install -r requirements.txt
   sudo python3 -m pip install -r test-requirements.txt
   py.test
+  
+Errors? `JPEG <http://stackoverflow.com/questions/34631806/fail-during-installation-of-pillow-python-module-in-linux>`__
 
 To also make it importable for other libraries, you can link it into the site-packages folder this way:
 
