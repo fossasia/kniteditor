@@ -38,11 +38,15 @@ function download(binary) {
 }
 
 function downloadAutomatically() {
-  for (var i = 0; i < binaries.length ; i++) {
-    var binary = binaries[i];
-    for (var j = 0; j < binary.browser.length; j++) {
-      var osIdentifier = binary.browser[j];
-      // TODO: identify os and start download automatically
+    var OSName=IdentifyOS();
+    downloadById(OSName);
     }
   }
+}
+function IdentifyOS(){
+    var OSName;
+if (window.navigator.userAgent.indexOf("Windows NT 10.0 || Windows NT 6.2 || Windows NT 6.1 || Windows NT 6.0 || Windows NT 5.1 || Windows NT 5.0")                                         != -1) OSName="windows";
+if (window.navigator.userAgent.indexOf("Mac")            != -1) OSName="mac";
+if (window.navigator.userAgent.indexOf("X11 || Linux")   != -1) OSName="ubuntu";
+    return OSName;
 }
