@@ -14,8 +14,8 @@ environment:
 
 
 install:
-  - "%PYTHON%\\python.exe -m pip install docutils pygments pypiwin32 kivy.deps.sdl2 kivy.deps.glew"
-  - "%PYTHON%\\python.exe -m pip install kivy kivy-garden"
+  - "%PYTHON%\\python.exe -m pip install docutils==0.12 pygments==2.1.3 pypiwin32== kivy.deps.sdl2==0.1.12 kivy.deps.glew==0.1.4"
+  - "%PYTHON%\\python.exe -m pip install kivy==1.9.1 kivy-garden==0.1.4"
   - "%PYTHON%\\python.exe -m pip install -r requirements.txt"
   - "%PYTHON%\\python.exe -m pip install -r test-requirements.txt"
   - "%PYTHON%\\python.exe setup.py install"
