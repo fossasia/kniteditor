@@ -3,7 +3,7 @@ mac-build
 
 This installer is based on `the kivy documentation
 <https://kivy.org/docs/guide/packaging-osx.html>`__.
-Tihs build is automatically triggered by travis. When a tag is pushed, the outcome is uplaoded to the github releases.
+Tihs build is automatically triggered by travis. When a tag is pushed, the outcome is uploaded to the github releases.
 
 Preconditions
 -------------
