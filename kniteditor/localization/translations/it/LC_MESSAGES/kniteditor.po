@@ -1,0 +1,49 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: kniteditor\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.3.1\n"
+
+msgid "Yes"
+msgstr "Si"
+
+msgid "No"
+msgstr "No"
+
+msgid "Save"
+msgstr "Salva"
+
+msgid "Load"
+msgstr "Carica"
+
+msgid "Cancel"
+msgstr "Annulla"
+
+msgid "Choose a connection!"
+msgstr "Scegli una connessione!"
+
+msgid "AYAB Knit Settings"
+msgstr "Impostazione maglia AYAB"
+
+msgid "Machine Type:"
+msgstr "Tipo di macchina:"
+
+msgid "Connections:"
+msgstr "Connessioni:"
+
+msgid "left end needle"
+msgstr "ultimo ago a sinistra"
+
+msgid "right end needle"
+msgstr "ultimo ago a destra"
+
+msgid "Start Knitting!"
+msgstr "Inizia a lavorare a maglia!"
