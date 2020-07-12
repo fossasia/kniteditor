@@ -19,3 +19,6 @@ msgstr "English"
 
 msgid "ru"
 msgstr "Русский"
+
+msgid "it"
+msgstr "Italian"
