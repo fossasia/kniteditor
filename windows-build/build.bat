@@ -9,6 +9,6 @@ if "%PYTHON%" == "" (
     exit 1
 )
 
-"%PYTHON%\python.exe" -m pip install pyinstaller pygame
+"%PYTHON%\python.exe" -m pip install pyinstaller==3.2.1 pygame==1.9.3 opencv-python==3.2.0.6 
 "%PYTHON%\python.exe" -m PyInstaller KnitEditor.spec
 "Inno Setup 5\ISCC.exe" KnitEditor.iss
